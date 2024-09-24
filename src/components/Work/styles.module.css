@@ -1,0 +1,45 @@
+.heading{
+  color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    font-size: 3.2rem;
+}
+
+.subheading{
+  font-weight: 600;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  background: -webkit-linear-gradient(45deg,#ffffff, #dfdfdfc3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  padding-top: 4vh;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .main_container{
+    top:6vh;
+    width: 88vw;
+    margin: 35% 1.5%;
+    padding: 2vh;
+    font-size: 2.6vh;
+    }
+
+
+    .email{
+      font-size: 4vh;
+      margin-top: 2vh;
+      padding-bottom: 1.5vh;
+    }
+    
+
+    
+
+}
