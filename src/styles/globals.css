@@ -33,3 +33,16 @@ main{
     text-wrap: balance;
   }
 }
+
+.button {
+  padding: 1vh;
+  font-size: 1px;
+ text-transform: uppercase;
+ color: #ffffff;
+
+}
+
+.button:hover {
+  border-color: #666666;
+  background: #292929;
+}

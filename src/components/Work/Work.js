@@ -1,29 +1,59 @@
-import React from "react"
+import React, { useState, useEffect, Suspense, useCallback } from "react";
 import styles from "./styles.module.css";
 import ProjectListComponent from "../ProjectListComponent/ProjectListComponent";
 import projectsList from "@/utilityFunctions/utilityFunctions";
 
 const Work = (props) => {
-    return (
-        <div className={`flex flex-col w-full content-center items-center`}>
-            <h1 className={`${styles.heading} font-bold uppercase`}>Work</h1>
-            <h3 className={`${styles.subheading} uppercase`}>Explore a Few of My Design Projects</h3>
-            <div  className={`${styles.container}`}>
-            {projectsList.map((projectObj) => {
-           
-           return (
-             <ProjectListComponent
-               key={projectObj.id}
-               projectName={projectObj.name}
-               description={projectObj.description}
-               projectLink={projectObj.link}
-               imgUrl={projectObj.image}
-             />
-           );
-         })}
-            </div>
-        </div>
-    )
-}
+  const [tabSelected, setTabSelected] = useState("D");
 
-export default Work
+  const handleOnClick = (click) => {
+    setTabSelected(click);
+  };
+
+  return (
+    <div className={`flex flex-col w-full content-center items-center`}>
+      <h1 className={`${styles.heading} font-bold uppercase`}>Work</h1>
+      <h3 className={`${styles.subheading} uppercase`}>
+        Explore a Few of My Design Projects
+      </h3>
+      <div className={`${styles.buttonContainer}`}>
+        <button
+          className={`${styles.button} ${tabSelected==="D" && styles.buttonActive}`}
+          onClick={() => handleOnClick("D")}
+        >
+          Design
+        </button>{" "}
+        <button
+          className={`${styles.button}  ${tabSelected==="Dev" && styles.buttonActive}`}
+          onClick={() => handleOnClick("Dev")}
+        >
+          Development
+        </button>{" "}
+        <button
+          className={`${styles.button}  ${tabSelected==="O" && styles.buttonActive}`}
+          onClick={() => handleOnClick("O")}
+        >
+          Others
+        </button>
+      </div>
+
+      <div className={`${styles.container}`}>
+  {projectsList
+    .filter((projectObj) => projectObj.category === tabSelected)
+    .map((projectObj) => (
+      <ProjectListComponent
+        key={projectObj.id}
+        projectName={projectObj.name}
+        description={projectObj.description}
+        projectLink={projectObj.link}
+        imgUrl={projectObj.image}
+        tab={tabSelected}
+      />
+    ))}
+</div>
+
+    </div>
+  );
+};
+
+export default Work;

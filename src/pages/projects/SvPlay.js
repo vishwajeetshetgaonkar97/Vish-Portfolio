@@ -28,8 +28,8 @@ const SvPlay = (props) => {
           <Image
             className={`${styles.mockupImage} w-full h-auto`}
             layout="responsive"
-            width={1280}
-            height={720}
+            width={1920}
+            height={1080}
             src="/work/svplay/svplayHero.png"
             alt="svplay"
           />
@@ -57,7 +57,7 @@ const SvPlay = (props) => {
             <div className={styles.sub_role_container}>
               <div className={styles.role}>Teams</div>
               <div className={styles.role_description_containers}>
-              <ul>Founders</ul>
+                <ul>Founders</ul>
                 <ul>Product Managers</ul>
                 <ul>Marketers</ul>
                 <ul>Developers</ul>
@@ -149,8 +149,8 @@ const SvPlay = (props) => {
             <Image
               className={`${styles.mockupImage} w-full h-auto mt-4`}
               layout="responsive"
-              width={1280}
-              height={720}
+              width={1920}
+              height={1080}
               src="/work/svplay/p1.png"
               alt="svplay"
             />
@@ -158,8 +158,8 @@ const SvPlay = (props) => {
             <Image
               className={`${styles.mockupImage} w-full h-auto mt-4`}
               layout="responsive"
-              width={1280}
-              height={720}
+              width={1920}
+              height={1080}
               src="/work/svplay/f1.png"
               alt="svplay"
             />
@@ -167,8 +167,8 @@ const SvPlay = (props) => {
             <Image
               className={`${styles.mockupImage} w-full h-auto mt-4`}
               layout="responsive"
-              width={1280}
-              height={720}
+              width={1920}
+              height={1080}
               src="/work/svplay/f2.png"
               alt="svplay"
             />
@@ -176,8 +176,8 @@ const SvPlay = (props) => {
             <Image
               className={`${styles.mockupImage} w-full h-auto mt-4`}
               layout="responsive"
-              width={1280}
-              height={720}
+              width={1920}
+              height={1080}
               src="/work/svplay/f3.png"
               alt="svplay"
             />
@@ -185,8 +185,8 @@ const SvPlay = (props) => {
             <Image
               className={`${styles.mockupImage} w-full h-auto mt-4`}
               layout="responsive"
-              width={1280}
-              height={720}
+              width={1920}
+              height={1080}
               src="/work/svplay/f4.png"
               alt="svplay"
             />
@@ -202,26 +202,34 @@ const SvPlay = (props) => {
               refining the design.
             </div>
             <br />
-            <div className={styles.content_sub_header}>Phase 1</div>
+            <div className={styles.content_sub_header}>
+              Phase 1: Stakeholder Design Validation
+            </div>
             <div className={styles.content}>
               Involved internal testing with managers and founders to ensure the
               initial design met the project’s goals.
             </div>
             <br />
-            <div className={styles.content_sub_header}>Phase 2</div>
+            <div className={styles.content_sub_header}>
+              Phase 2:Technical Refinement
+            </div>
             <div className={styles.content}>
               We collaborated with tech leads to address technical challenges
               and further refine the UI.
             </div>
             <br />
-            <div className={styles.content_sub_header}>Phase 3</div>
+            <div className={styles.content_sub_header}>
+              Phase 3: Internal Testing & Refinement
+            </div>
             <div className={styles.content}>
               Expanded testing to the internal team, where we gathered more
               insights on user flows and usability, making additional
               refinements.
             </div>
             <br />
-            <div className={styles.content_sub_header}>Phase 4</div>
+            <div className={styles.content_sub_header}>
+              Phase 4: User Testing & Final Adjustments
+            </div>
             <div className={styles.content}>
               We conducted real-world testing with end users, which allowed us
               to make the final adjustments based on their feedback.

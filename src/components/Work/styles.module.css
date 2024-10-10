@@ -19,9 +19,44 @@
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
-  padding-top: 4vh;
+  padding-top: 2vh;
 }
 
+.buttonContainer{
+  position: sticky; 
+  top: 8vh;
+  z-index: 5;
+  background: rgba(255, 255, 255, 0.05); 
+  backdrop-filter: blur(27px);
+  border-radius: 10px; 
+  padding: 0.8rem 1rem; 
+  margin-top: 1.5vh;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.button{
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  padding: 0.4rem 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  font-weight: 600;
+}
+.button:hover{
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.buttonActive{
+  color: #000000;
+  background-color: #ffffff;
+  border: 2px solid rgba(102, 0, 255, 0.25);
+}
+.buttonActive:hover{
+  color: #000000;
+  background-color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+}
 
 @media only screen and (max-width: 800px) {
   .main_container{

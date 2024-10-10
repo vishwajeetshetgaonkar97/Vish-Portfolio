@@ -1,22 +1,26 @@
-import React from "react"
+import React from "react";
 import styles from "./styles.module.css";
 
-const ProjectListComponent = ({projectName="",description="",projectLink="/",imgUrl=""}) => {
-   
-    return (
-        <div
-        className={styles.cardWrapper}
-        onClick={() => {
-          location.href = projectLink;
-        }}
-      >
-        <img src={imgUrl} alt="coca cola" />
+const ProjectListComponent = ({
+  projectName = "",
+  description = "",
+  projectLink = "/",
+  imgUrl = "",
+}) => {
+  return (
+    <div
+      className={styles.cardWrapper}
+      onClick={() => {
+        location.href = projectLink;
+      }}
+    >
+      <img src={imgUrl} alt="coca cola" />
+      <div className={styles.cardContent}>
         <div className={styles.cardWrapperHeading}>{projectName}</div>
-        <div className={styles.cardWrapperDescription}>
-       {description}
-        </div>
+        <div className={styles.cardWrapperDescription}>{description}</div>
       </div>
-    )
-}
+    </div>
+  );
+};
 
-export default ProjectListComponent
+export default ProjectListComponent;

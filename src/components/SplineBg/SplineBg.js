@@ -4,6 +4,14 @@ import React, { useState, useEffect, Suspense, useCallback } from "react";
 
 const Spline = React.lazy(() => import("@splinetool/react-spline"));
 
+// Loader Component
+const Loader = () => (
+  <div className={styles.loaderContainer}>
+    <div className={styles.spinner}></div>
+    <p>Loading 3D Experience...</p>
+  </div>
+);
+
 const SplineBg = (props) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -43,12 +51,15 @@ const SplineBg = (props) => {
 
   return (
     <div className={`${styles.container}`}>
-      <Suspense fallback={"loading"}>
-        <Spline
-          className={`fixed top-0 left-0 h-screen w-screen z-0 ${styles.spline}`}
-          scene="https://prod.spline.design/Qp0S9wS3ub91mSAr/scene.splinecode"
-          onError={handleSplineError}
-        />
+      <Suspense fallback={<Loader />}>
+        {!hasSplineError && (
+          <Spline
+            className={`fixed top-0 left-0 h-screen w-screen z-0 ${styles.spline}`}
+            scene="https://prod.spline.design/Qp0S9wS3ub91mSAr/scene.splinecode"
+            onError={handleSplineError}
+          />
+        )}
+        {hasSplineError && <p className={styles.error}>Failed to load 3D scene.</p>}
       </Suspense>
 
       <div
@@ -58,10 +69,10 @@ const SplineBg = (props) => {
       </div>
 
       <div className={`${isScrolled ? styles.hidden : ""} ${styles.socialMedia} `}>
-        <Image src="/socialMedia/linkedin.png" height={27} width={27} alt="linkedin"/>
-        <Image src="/socialMedia/twitter.png" height={27} width={27} alt="twitter"/>
-        <Image src="/socialMedia/behance.png" height={27} width={27} alt="behance"/>
-        <Image src="/socialMedia/github.png" height={27} width={27} alt="github"/>
+        <Image className={styles.socialIcon} src="/socialMedia/linkedin.png" height={27} width={27} alt="linkedin"/>
+        <Image  className={styles.socialIcon} src="/socialMedia/twitter.png" height={27} width={27} alt="twitter"/>
+        <Image   className={styles.socialIcon} src="/socialMedia/behance.png" height={27} width={27} alt="behance"/>
+        <Image  className={styles.socialIcon} src="/socialMedia/github.png" height={27} width={27} alt="github"/>
       </div>
     </div>
   );
