@@ -35,6 +35,10 @@ padding: 1vh 0;
   border-radius: 0.5rem;
 }
 
+.videoPlayer{
+  border-radius: 0.5rem;
+}
+
 .role_container,.content_container{
   display: flex;
   flex-direction: row;
@@ -72,6 +76,47 @@ flex-direction: column;
  color: #a6a6a6;;
   padding: 0rem 0rem 0.4rem 0rem;
 }
+
+
+.buttonContainer{
+  position: relative; 
+  top: 0vh;
+  z-index: 5;
+  background: rgba(255, 255, 255, 0.05); 
+  backdrop-filter: blur(27px);
+  border-radius: 10px; 
+  padding: 0.8rem 1rem; 
+  margin-top: 1.5vh;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  width: fit-content;
+}
+
+.button{
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  padding: 0.4rem 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.button:hover{
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.buttonIcon{
+  height: 1.5rem !important;
+  width: 1.5rem !important;
+}
+
+
+
 
 @media only screen and (max-width: 800px) {
 }

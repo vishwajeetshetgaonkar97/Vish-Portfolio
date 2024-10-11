@@ -11,10 +11,10 @@ const Work = (props) => {
   };
 
   return (
-    <div className={`flex flex-col w-full content-center items-center`}>
+    <div className={`flex flex-col w-full content-center items-center pb-6`}>
       <h1 className={`${styles.heading} font-bold uppercase`}>Work</h1>
       <h3 className={`${styles.subheading} uppercase`}>
-        Explore a Few of My Design Projects
+      A Showcase of My Design, Development, and Various Creative Endeavors
       </h3>
       <div className={`${styles.buttonContainer}`}>
         <button
@@ -48,6 +48,7 @@ const Work = (props) => {
         projectLink={projectObj.link}
         imgUrl={projectObj.image}
         tab={tabSelected}
+        tags={projectObj.tags}
       />
     ))}
 </div>

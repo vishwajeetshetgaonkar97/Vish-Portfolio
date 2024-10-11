@@ -1,17 +1,18 @@
 .heading{
-  color: white;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: rgb(255, 255, 255);
-    font-size: 3.2rem;
+  color: rgba(255, 255, 255, 0);
+    -webkit-text-stroke-width: 1.4px;
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.868);
+    font-size: 3.4rem;
 }
 
 .subheading{
   font-weight: 600;
   font-size: 1.2rem;
-  opacity: 0.8;
+  opacity: 0.9;
   background: -webkit-linear-gradient(45deg,#ffffff, #dfdfdfc3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  padding-bottom: 1vh;
 }
 
 .container{

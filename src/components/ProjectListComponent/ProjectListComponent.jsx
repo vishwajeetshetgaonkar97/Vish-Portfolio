@@ -6,6 +6,7 @@ const ProjectListComponent = ({
   description = "",
   projectLink = "/",
   imgUrl = "",
+  tags=""
 }) => {
   return (
     <div
@@ -14,10 +15,12 @@ const ProjectListComponent = ({
         location.href = projectLink;
       }}
     >
-      <img src={imgUrl} alt="coca cola" />
+      <img src={imgUrl} alt="projectImage" />
       <div className={styles.cardContent}>
+       
         <div className={styles.cardWrapperHeading}>{projectName}</div>
         <div className={styles.cardWrapperDescription}>{description}</div>
+        <div className={styles.tagsInfo}>{tags}</div>
       </div>
     </div>
   );

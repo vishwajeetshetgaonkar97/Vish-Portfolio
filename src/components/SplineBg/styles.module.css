@@ -65,10 +65,10 @@
 .socialMedia{
   display: flex;
   width: 100%;
-  padding: 0 2rem;
-position: relative;
+  padding: 0 1.5rem;
+position: fixed;
 z-index: 2;
-top: 91.5vh;
+top: 92vh;
 gap: 1.25rem;
 }
 .socialIcon{

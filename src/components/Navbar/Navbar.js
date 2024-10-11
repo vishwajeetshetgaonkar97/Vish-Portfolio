@@ -16,7 +16,7 @@ const Navbar = ({ isProject = false }) => {
   return (
     <>
       <nav
-        className={`${styles.navbar} flex items-center content-center backdrop-filter backdrop-blur-lg w-full px-6 py-4 `}
+        className={`${styles.navbar} flex items-center content-center  w-full px-6 py-4 `}
       >
         <Image
          src={isProject?"/back.png":"/logo.png"}
@@ -24,6 +24,7 @@ const Navbar = ({ isProject = false }) => {
           width={isProject?25:50}
           alt="vishwajeet shetgaonkar logo"
           onClick={handleIconClick}
+          className="cursor-pointer"
         />
         <div className="flex items-end content-end w-full justify-end space-x-4">
           <a className={styles.topNavButton}>Work</a>
