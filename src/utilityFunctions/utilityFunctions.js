@@ -78,21 +78,44 @@ const projectsList = [
   },
   {
     id: 5,
-    name: '3D Coca-Cola Website Concept',
-    description: 'A modern and engaging digital experience that leverages trending 3D immersive technologies.',
-    image: '/work/cocaCola/mockup.png',
-    link: '/projects/CocaCola3D',
+    name: "3D Coca-Cola Website Concept",
+    description:
+      "A modern and engaging digital experience that leverages trending 3D immersive technologies.",
+    image: "/work/cocaCola/mockup.png",
+    link: "/projects/CocaCola3D",
     category: "Dev",
     tags: "Dev, Next.js, 3D, Spline",
-},
-{
-  id: 6,
-  name: 'Sarva Dashboard',
-  description: 'A dashboard for displaying air quality conditions for buildings and surrounding areas on a map, along with additional relevant information.',
-  image: '/work/sarvaDashboard/mockup.png',
-  link: '/projects/SarvaDashboard',
-  category: "Dev",
-  tags: "Dev, React.js, Dashboard, Chart.js, CSS",
-},
+  },
+  {
+    id: 8,
+    name: "3d Portfolio Concept",
+    description:
+      "A dashboard for displaying air quality conditions for buildings and surrounding areas on a map, along with additional relevant information.",
+    image: "/work/threeJsPortfolio/mockup.png",
+    link: "/projects/ThreeJsPortfolio",
+    category: "Dev",
+    tags: "Dev, Next.js, Three.js, CSS",
+  },
+  {
+    id: 6,
+    name: "Sarva Dashboard",
+    description:
+      "A dashboard for displaying air quality conditions for buildings and surrounding areas on a map, along with additional relevant information.",
+    image: "/work/sarvaDashboard/mockup.png",
+    link: "/projects/SarvaDashboard",
+    category: "Dev",
+    tags: "Dev, React.js, Dashboard, Chart.js, CSS",
+  },
+  {
+    id: 7,
+    name: "Active Building Dashboard",
+    description:
+      "An interactive dashboard displaying real-time air quality conditions across buildings and surrounding areas, with dynamic layouts and pixel-perfect design for large screen displays.",
+    image: "/work/activeBuildingDashboard/mockup.png",
+    link: "/projects/ActiveBuildingsDashboard",
+    category: "Dev",
+    tags: "Dev, React.js, Dashboard, CSS, OBS",
+  },
+  
 ];
 export default projectsList;

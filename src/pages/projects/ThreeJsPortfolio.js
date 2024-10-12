@@ -4,7 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Navbar from "@/components/Navbar/Navbar";
 
-const CocaCola3D = (props) => {
+const ThreeJsPortfolio = (props) => {
   const iframeRef = useRef(null);
   const [videoSrc, setVideoSrc] = useState("");
 
@@ -13,7 +13,7 @@ const CocaCola3D = (props) => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setVideoSrc(
-            "https://www.youtube.com/embed/Wt6iRRZI_TA?si=ChVZreYk3Ko8PmId&autoplay=1&mute=1"
+            "https://www.youtube.com/embed/KMRZzk_vqgI?si=bVGGUncMM4k8-ucO&autoplay=1&mute=1"
           );
         }
       },
@@ -44,7 +44,7 @@ const CocaCola3D = (props) => {
 
         <div className={styles.main_container}>
           <div className={styles.headingContainer}>
-            <div className={styles.heading}>3D Coca-Cola Website Concept</div>
+            <div className={styles.heading}>ThreeJs Portfolio Concept</div>
             {/* <div className={styles.subHeading}>
             This concept aimed to create an immersive and modern digital experience for Coca-Cola, leveraging 3D technologies to engage users. The website design utilized cutting-edge trends in interactive 3D environments, offering a fresh take on brand engagement.
             </div> */}
@@ -55,7 +55,7 @@ const CocaCola3D = (props) => {
             layout="responsive"
             width={1920}
             height={1080}
-            src="/work/cocaCola/mockup.png"
+            src="/work/threeJsPortfolio/mockup.png"
             alt="svplay"
           />
 
@@ -65,15 +65,16 @@ const CocaCola3D = (props) => {
               <div className={styles.role_description_containers}>
                 <ul>Developer</ul>
                 <ul>UI Designer</ul>
+                <ul>UX Designer</ul>
               </div>
             </div>
             <div className={styles.sub_role_container}>
               <div className={styles.role}>Technlogies</div>
               <div className={styles.role_description_containers}>
+                <ul>Three.js</ul>
                 <ul>Next.js</ul>
                 <ul>CSS</ul>
-                <ul>Spline</ul>
-                <ul>Figma</ul>
+               
               </div>
             </div>
             <div className={styles.sub_role_container}>
@@ -91,7 +92,7 @@ const CocaCola3D = (props) => {
             <button
               className={`${styles.button} `}
               onClick={() => {
-                window.open("https://vish-3d-coca-cola.vercel.app/", "_blank");
+                window.open("https://vishwajeetshetgaonkar.vercel.app/", "_blank");
               }}
             >
               Project Link{" "}
@@ -109,56 +110,38 @@ const CocaCola3D = (props) => {
           <div className={styles.content_container}>
             <div className={styles.content_header}>Project Summary</div>
             <div className={styles.content}>
-              This concept aimed to create an immersive and modern digital
-              experience for Coca-Cola, leveraging 3D technologies to engage
-              users. The website design utilized cutting-edge trends in
-              interactive 3D environments, offering a fresh take on brand
-              engagement.
+            The Three.js Portfolio Concept is an immersive 3D experience, showcasing my exploration and mastery of Three.js and Next.js. The portfolio is designed to highlight innovative concepts through interactive, real-time 3D environments. It serves as a working prototype where I experimented with various features, including smooth transitions, scroll animations, drag-and-drop interactions, and dynamic object manipulation.
             </div>
           </div>
           <div className={styles.content_container}>
             <div className={styles.content_header}>My Role</div>
             <div className={styles.content}>
-              I was responsible for both UI design and development, where I
-              focused on creating a visually appealing, user-centered
-              experience. This project challenged me to experiment with 3D
-              elements, interactive transitions, and user flow to achieve an
-              engaging interface.
+            As the sole developer and designer, I was responsible for every aspect of this project—learning, designing, prototyping, and developing. I underwent multiple iterations to fine-tune the user experience and visual design.
+            </div>
+            <br />
+
+            <div className={styles.content_sub_header}>
+            Explored & Applied Three.js
+            </div>
+            <div className={styles.content}>
+            Learned the fundamentals of Three.js and applied them to create engaging 3D interactions.
+            </div>
+            <br />
+            <div className={styles.content_sub_header}>Prototyping & Development</div>
+            <div className={styles.content}>
+            Built a working prototype, iterating based on performance and user interaction feedback.
+            </div>
+            <br />
+            <div className={styles.content_sub_header}>
+            UI/UX Design
+            </div>
+            <div className={styles.content}>
+            Designed the overall user interface, focusing on clean visuals and an intuitive experience to keep users engaged.
             </div>
           </div>
 
           <div className={styles.content_container}>
-            <div className={styles.content_header}>Spline Integration</div>
-
-            <div className={styles.content}>
-              As a first-time user of Spline, I explored multiple techniques to
-              integrate and optimize 3D models. I focused on reducing file
-              sizes, simplifying complex designs, and incorporating subtle
-              animations to enhance performance without compromising the
-              experience.
-            </div>
-
-            <Image
-              className={`${styles.mockupImage} w-full h-auto`}
-              layout="responsive"
-              width={1920}
-              height={1080}
-              src="/work/cocaCola/p1.png"
-              alt="svplay"
-            />
-            <br />
-            <div className={styles.content_header}>
-              Design & Development Challenges
-            </div>
-
-            <div className={styles.content}>
-              The process involved multiple iterations and tests, focusing on
-              smooth transitions, drag-and-drop interactions, scroll-triggered
-              events, and gravity simulations. By frequently refining the
-              design, I gained a deeper understanding of 3D UI/UX design
-              principles and Spline’s capabilities.
-            </div>
-            <div
+          <div
               className={`${styles.videoPlayer} w-full relative mt-4`}
               style={{ aspectRatio: "16 / 9" }}
               ref={iframeRef}
@@ -175,16 +158,38 @@ const CocaCola3D = (props) => {
                 ></iframe>
               )}
             </div>
+
+           
+            <br />
+            <br />
+            <div className={styles.content_header}>Project Highlights</div>
+            <br />
+            <div className={styles.content_sub_header}>
+            Interactive 3D Objects
+            </div>
+            <div className={styles.content}>
+            Implemented drag-and-drop features, allowing users to interact with objects directly.
+            </div>
+            <br />
+            <div className={styles.content_sub_header}>
+            Smooth Animations
+            </div>
+            <div className={styles.content}>
+            Utilized scroll-based animations and transitions to create fluid, engaging navigation.
+            </div>
+            <br />
+            <div className={styles.content_sub_header}>
+            Responsive Design
+            </div>
+            <div className={styles.content}>
+            Ensured a seamless experience across various devices.
+            </div>
           </div>
 
           <div className={styles.content_container}>
             <div className={styles.content_header}>Outcome</div>
             <div className={styles.content}>
-              The project significantly improved my knowledge of immersive
-              design and optimization techniques. This side project was a
-              valuable learning experience that not only expanded my design
-              skills but also deepened my technical understanding of interactive
-              3D web development.
+            This project helped enhance my proficiency in Three.js and Next.js, offering a modern and interactive way to present my portfolio. It reflects my continuous learning process and passion for UI/UX design.
             </div>
           </div>
         </div>
@@ -193,4 +198,4 @@ const CocaCola3D = (props) => {
   );
 };
 
-export default CocaCola3D;
+export default ThreeJsPortfolio;
