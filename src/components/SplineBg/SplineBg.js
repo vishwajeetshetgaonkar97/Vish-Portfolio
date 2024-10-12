@@ -14,34 +14,18 @@ const Loader = () => (
 
 const SplineBg = (props) => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   const [hasSplineError, setHasSplineError] = useState(false);
+  const [isSplineLoaded, setIsSplineLoaded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      React.startTransition(() => {
-        setIsScrolled(window.scrollY > 5);
-      });
-    };
-
-    let resizeTimeout;
-    const handleResize = () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => {
-        React.startTransition(() => {
-          setIsMobile(window.innerWidth <= 768);
-        });
-      }, 150);
+      setIsScrolled(window.scrollY > 5);
     };
 
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleResize);
-
-    handleResize(); // Check initial window size
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -49,30 +33,33 @@ const SplineBg = (props) => {
     setHasSplineError(true);
   }, []);
 
+  const handleSplineLoad = useCallback(() => {
+    setIsSplineLoaded(true);
+  }, []);
+
   return (
     <div className={`${styles.container}`}>
       <Suspense fallback={<Loader />}>
-        {!hasSplineError && (
+        {!hasSplineError && ( // Render Spline if there's no error
           <Spline
             className={`fixed top-0 left-0 h-screen w-screen z-0 ${styles.spline}`}
             scene="https://prod.spline.design/Qp0S9wS3ub91mSAr/scene.splinecode"
             onError={handleSplineError}
+            onLoad={handleSplineLoad} // Add onLoad event handler
           />
         )}
         {hasSplineError && <p className={styles.error}>Failed to load 3D scene.</p>}
       </Suspense>
 
-      <div
-        className={`${styles.scrollIcon} ${isScrolled ? styles.hidden : ""}`}
-      >
+      <div className={`${styles.scrollIcon} ${isScrolled ? styles.hidden : ""}`}>
         <div className={styles.mouse}></div>
       </div>
 
-      <div className={`${isScrolled ? styles.hidden : ""} ${styles.socialMedia} `}>
-        <Image className={styles.socialIcon} src="/socialMedia/linkedin.png" height={27} width={27} alt="linkedin"/>
-        <Image  className={styles.socialIcon} src="/socialMedia/twitter.png" height={27} width={27} alt="twitter"/>
-        <Image   className={styles.socialIcon} src="/socialMedia/behance.png" height={27} width={27} alt="behance"/>
-        <Image  className={styles.socialIcon} src="/socialMedia/github.png" height={27} width={27} alt="github"/>
+      <div className={`${isScrolled ? styles.hidden : ""} ${styles.socialMedia}`}>
+        <Image className={styles.socialIcon} src="/socialMedia/linkedin.png" height={27} width={27} alt="linkedin" />
+        <Image className={styles.socialIcon} src="/socialMedia/twitter.png" height={27} width={27} alt="twitter" />
+        <Image className={styles.socialIcon} src="/socialMedia/behance.png" height={27} width={27} alt="behance" />
+        <Image className={styles.socialIcon} src="/socialMedia/github.png" height={27} width={27} alt="github" />
       </div>
     </div>
   );
