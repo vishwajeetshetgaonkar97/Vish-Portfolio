@@ -1,14 +1,24 @@
 import Image from "next/image";
 import styles from "./styles.module.css";
-import React, { useState, useEffect, Suspense, useCallback } from "react";
+import React, {
+  useState,
+  useEffect,
+  Suspense,
+  useCallback,
+  useRef,
+} from "react";
 
 const Spline = React.lazy(() => import("@splinetool/react-spline"));
 
 // Loader Component
 const Loader = () => (
   <div className={styles.loaderContainer}>
-    <div className={styles.spinner}></div>
-    <p>Loading 3D Experience...</p>
+    <div className={styles.loader}>
+      <div className={styles.circle}></div>
+      <div className={styles.circle}></div>
+      <div className={styles.circle}></div>
+      <div className={styles.circle}></div>
+    </div>
   </div>
 );
 
@@ -16,51 +26,78 @@ const SplineBg = (props) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [hasSplineError, setHasSplineError] = useState(false);
   const [isSplineLoaded, setIsSplineLoaded] = useState(false);
+  const splineApp = useRef(null); // Create a ref to hold the Spline application instance
+
+  const handleScroll = useCallback(() => {
+    setIsScrolled(window.scrollY > 5);
+  }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 5);
-    };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [handleScroll]);
 
   const handleSplineError = useCallback(() => {
     setHasSplineError(true);
   }, []);
 
-  const handleSplineLoad = useCallback(() => {
-    setIsSplineLoaded(true);
+  // This function will run when the Spline scene loads
+  const onLoad = useCallback((spline) => {
+    splineApp.current = spline; // Save the Spline app instance in the ref
+    setIsSplineLoaded(true); // Set Spline as loaded
   }, []);
 
   return (
-    <div className={`${styles.container}`}>
+    <div className={styles.container}>
+      {/* Always show loader initially */}
+      {!isSplineLoaded && !hasSplineError && <Loader />}
+
       <Suspense fallback={<Loader />}>
-        {!hasSplineError && ( // Render Spline if there's no error
+        {!hasSplineError && ( // Render Spline if no error occurred
           <Spline
-            className={`fixed top-0 left-0 h-screen w-screen z-0 ${styles.spline}`}
+            className="fixed top-0 left-0 h-screen w-screen z-0"
             scene="https://prod.spline.design/Qp0S9wS3ub91mSAr/scene.splinecode"
-            onError={handleSplineError}
-            onLoad={handleSplineLoad} // Add onLoad event handler
+            onError={handleSplineError} // Call the error handler if something goes wrong
+            onLoad={onLoad} // Pass the onLoad function here
           />
         )}
-        {hasSplineError && <p className={styles.error}>Failed to load 3D scene.</p>}
+
+        {hasSplineError && (
+          <p className={styles.error}>Failed to load 3D scene.</p>
+        )}
       </Suspense>
 
-      <div className={`${styles.scrollIcon} ${isScrolled ? styles.hidden : ""}`}>
-        <div className={styles.mouse}></div>
-      </div>
+      {/* Render scroll icon and social media only after Spline is loaded */}
+      {isSplineLoaded && !hasSplineError && (
+        <>
+          <div
+            className={`${styles.scrollIcon} ${
+              isScrolled ? styles.hidden : ""
+            }`}
+          >
+            <div className={styles.mouse}></div>
+          </div>
 
-      <div className={`${isScrolled ? styles.hidden : ""} ${styles.socialMedia}`}>
-        <Image className={styles.socialIcon} src="/socialMedia/linkedin.png" height={27} width={27} alt="linkedin" />
-        <Image className={styles.socialIcon} src="/socialMedia/twitter.png" height={27} width={27} alt="twitter" />
-        <Image className={styles.socialIcon} src="/socialMedia/behance.png" height={27} width={27} alt="behance" />
-        <Image className={styles.socialIcon} src="/socialMedia/github.png" height={27} width={27} alt="github" />
-      </div>
+          <div
+            className={`${styles.socialMedia} ${
+              isScrolled ? styles.hidden : ""
+            }`}
+          >
+            {["linkedin", "twitter", "behance", "github"].map((platform) => (
+              <Image
+                key={platform}
+                className={styles.socialIcon}
+                src={`/socialMedia/${platform}.png`}
+                height={27}
+                width={27}
+                alt={platform}
+              />
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 };
