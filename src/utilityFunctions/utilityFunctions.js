@@ -116,6 +116,26 @@ const projectsList = [
     category: "Dev",
     tags: "Dev, React.js, Dashboard, CSS, OBS",
   },
+  {
+    id: 8,
+    name: "Everyday Poster Series",
+    description:
+      "A creative exploration of day-to-day activities such as cooking, driving, and walking, expressed through minimalist poster designs. The series incorporates inspirations from typography, geometric shapes, and photo collages to deliver visually striking, modern compositions.",
+    image: "/work/poster/mockup.png",
+    link: "/projects/Poster",
+    category: "O",
+    tags: "Graphic Design, Illustration",
+  },
+  {
+    id: 9,
+    name: "Album Covers",
+    description:
+      "A project focused on designing album covers for different music genres, including vocal and pop. Each cover explores unique artistic styles, with vocal covers featuring minimalist designs and soft colors, while pop covers emphasize vibrant, complex illustrations and bright, vivid color schemes.",
+    image: "/work/albumCovers/mockup.png",
+    link: "/projects/AlbumCovers",
+    category: "O",
+    tags: "Graphic Design, Album Art, Illustration",
+  },
   
 ];
 export default projectsList;
