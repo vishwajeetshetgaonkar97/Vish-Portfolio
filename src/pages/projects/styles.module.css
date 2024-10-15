@@ -119,4 +119,36 @@ flex-direction: column;
 
 
 @media only screen and (max-width: 800px) {
+
+  .main_container {
+    margin-top: -100vh;
+    padding: 7vh 1vw 5vh 1vw;
+  }
+  
+  .heading{
+    font-size: 2rem;
+  }
+  
+  .subHeading{
+    font-size: 1rem;
+  }
+  
+  .role_container,.content_container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 1.5rem 0rem;
+  }
+  .role_container{
+    gap: 1rem;
+  }
+  .content_container{
+    flex-direction: column;
+    }
+    
+.sub_role_container{
+  padding: 0 0rem ;
+
+}
+  
 }

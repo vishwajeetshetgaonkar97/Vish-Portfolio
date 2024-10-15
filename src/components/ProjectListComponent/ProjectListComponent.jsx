@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./styles.module.css";
+import Image from "next/image";
 
 const ProjectListComponent = ({
   projectName = "",
@@ -43,7 +44,11 @@ const ProjectListComponent = ({
         location.href = projectLink;
       }}
     >
-      <img src={imgUrl} alt="projectImage" className={styles.projectImage} />
+      <Image src={imgUrl} alt="projectImage"   layout="responsive"
+            width={1920}
+            height={1080}
+            className={`${styles.projectImage} w-full h-auto md:w-auto md:h-[50vh]`}
+              />
       <div className={styles.cardContent}>
         <div className={styles.cardWrapperHeading}>{projectName}</div>
         <div className={styles.cardWrapperDescription}>{description}</div>

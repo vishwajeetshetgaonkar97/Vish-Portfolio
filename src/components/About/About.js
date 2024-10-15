@@ -44,6 +44,7 @@ const About = (props) => {
 
   return (
     <div
+    id="about"
       className={`${styles.wrapContainer}flex flex-col lg:w-2/3 w-full content-center items-center pb-6 lg:mt-12 mt-0 lg:ml-32 ml-0 lg:px-0 px-4  `}
     >
       <h1

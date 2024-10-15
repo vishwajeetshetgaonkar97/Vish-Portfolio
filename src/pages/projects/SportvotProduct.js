@@ -131,7 +131,6 @@ const SportvotProduct = (props) => {
               <div className={`${styles.content_sub_header} `}>
                 My responsibilities included
               </div>
-              <br />
 
               <div className={styles.content}>
                 My responsibilities included designing and developing the entire
