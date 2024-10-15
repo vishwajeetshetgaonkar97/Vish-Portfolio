@@ -173,27 +173,26 @@ gap: 1.25rem;
 	  
 	
 	  .scrollIcon{
-		top: 86vh;
+		top: 93.5vh;
 	  }
 	  
 	
 	  
 	  
 	  .socialMedia{
-		display: flex;
-		width: 100%;
-		padding: 0 1.5rem;
-	  position: fixed;
-	  z-index: 2;
-	  top: 65vh;
-	  gap: 1.25rem;
+		align-items: center;
+		justify-content: center;
+		
+	  top: 67vh;
+	  gap: 2rem;
+	  opacity: 0.7;
 	  }
 	  .socialIcon{
-		  cursor: pointer;
-		  transition: all 0.4s ease-in-out;
+		  height: 4vh;
+		  width: 4vh;
 	  }
 	  .socialIcon:hover{
-		  transform: scale(1.1);
+		  transform: scale(1);
 	  }
 	  
 

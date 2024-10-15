@@ -52,7 +52,7 @@ const Contact = (props) => {
   }, []);
 
   return (
-    <div className={`${styles.contactSection} mt-24`}>
+    <div className={`${styles.contactSection} sm:mt-24 mt-12`}>
       <h1
         ref={headingRef}
         className={`${styles.heading}  ${

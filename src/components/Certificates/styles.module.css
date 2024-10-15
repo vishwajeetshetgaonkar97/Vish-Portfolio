@@ -32,22 +32,22 @@ gap: 1vw;
 
 
 @media only screen and (max-width: 800px) {
-  .main_container{
-    top:6vh;
-    width: 88vw;
-    margin: 35% 1.5%;
-    padding: 2vh;
-    font-size: 2.6vh;
-    }
 
-
-    .email{
-      font-size: 4vh;
-      margin-top: 2vh;
-      padding-bottom: 1.5vh;
-    }
-    
-
-    
+  .certificateSection{
+    padding: 0 2.5vw;
+  gap: 3vw;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  }
+  
+  .certificateImage{
+    width: 42vw;
+  }
+  .certificateTitle{
+    width: 42vw;
+  }
+  
+  
 
 }

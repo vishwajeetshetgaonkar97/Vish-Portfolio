@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./styles.module.css";
-import ProjectListComponent from "../ProjectListComponent/ProjectListComponent";
-import projectsList from "@/utilityFunctions/utilityFunctions";
 import Image from "next/image";
 
 const About = (props) => {
@@ -46,7 +44,7 @@ const About = (props) => {
 
   return (
     <div
-      className={`flex flex-col w-2/3 content-center items-center pb-6 mt-12 ml-32 `}
+      className={`${styles.wrapContainer}flex flex-col lg:w-2/3 w-full content-center items-center pb-6 lg:mt-12 mt-0 lg:ml-32 ml-0 lg:px-0 px-4  `}
     >
       <h1
         ref={headingRef}

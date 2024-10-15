@@ -73,22 +73,20 @@
 
 
 @media only screen and (max-width: 800px) {
-  .main_container{
-    top:6vh;
-    width: 88vw;
-    margin: 35% 1.5%;
-    padding: 2vh;
-    font-size: 2.6vh;
-    }
-
-
-    .email{
-      font-size: 4vh;
-      margin-top: 2vh;
-      padding-bottom: 1.5vh;
-    }
-    
-
+ 
+  .subheading{
+   
+    font-size: 1.2rem;
+    text-align: center;
+  
+  }
+  .buttonContainer{
+    top: 5vh;
+   
+  }
+  .container{
+    padding-top: 0.5vh;
+  }
     
 
 }
