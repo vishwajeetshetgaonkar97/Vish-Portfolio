@@ -4,6 +4,9 @@ import SplineBg from "@/components/SplineBg/SplineBg";
 import Navbar from "@/components/Navbar/Navbar";
 import Work from "@/components/Work/Work";
 import Head from "next/head";
+import About from "@/components/About/About";
+import Certificate from "@/components/Certificates/Certificate";
+import Contact from "@/components/Contact/Contact";
 
 export default function Home() {
   return (
@@ -21,8 +24,11 @@ export default function Home() {
 
         <main className={` flex flex-col relative z-1 `}>
           <Work />
+          <About/>
+          <Certificate/>
+          
         </main>
-        <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
+        <Contact/>
       </div>
     </>
   );

@@ -1,7 +1,7 @@
 .heading{
   color: rgba(255, 255, 255, 0);
     -webkit-text-stroke-width: 1.4px;
-    -webkit-text-stroke-color: rgba(255, 255, 255, 0.868);
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.932);
     font-size: 3.4rem;
 }
 
@@ -58,6 +58,19 @@
   background-color: #ffffff;
   border: 2px solid rgba(255, 255, 255, 0.25);
 }
+
+.visible {
+  opacity: 1; /* Make it visible */
+  transform: translateY(0); /* Reset translate */
+  transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out; /* Smooth transition */
+}
+
+.cardWrapper {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(10px); /* Start from below */
+  transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out; /* Smooth transition */
+}
+
 
 @media only screen and (max-width: 800px) {
   .main_container{

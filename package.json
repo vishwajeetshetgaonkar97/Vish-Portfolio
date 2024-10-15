@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.1.5",
     "@splinetool/react-spline": "^4.0.0",
     "@splinetool/runtime": "^1.9.24",
     "next": "14.2.8",

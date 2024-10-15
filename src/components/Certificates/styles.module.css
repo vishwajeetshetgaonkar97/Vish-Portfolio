@@ -1,0 +1,53 @@
+
+
+.certificateSection{
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 0.5rem;
+  padding-top: 0vh;
+  padding: 0 8vw;
+  align-items: baseline;
+gap: 1vw;
+}
+
+.certificateImage{
+  border-radius: 0.4rem;
+  height: auto;
+  width: 16vw;
+  transition: all 0.2s ease-in;
+}
+
+.certificateImage:hover{
+  transform: scale(1.02);
+}
+
+.certificateTitle{
+  font-weight: 600;
+  font-size: 1rem;
+  width: fit-content;
+  width: 16vw;
+  padding-top: 0.5vh;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .main_container{
+    top:6vh;
+    width: 88vw;
+    margin: 35% 1.5%;
+    padding: 2vh;
+    font-size: 2.6vh;
+    }
+
+
+    .email{
+      font-size: 4vh;
+      margin-top: 2vh;
+      padding-bottom: 1.5vh;
+    }
+    
+
+    
+
+}

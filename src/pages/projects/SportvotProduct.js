@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 import Head from "next/head";
 import Image from "next/image";
 import Navbar from "@/components/Navbar/Navbar";
+import Contact from "@/components/Contact/Contact";
 
 const SportvotProduct = (props) => {
   return (
@@ -362,11 +363,21 @@ const SportvotProduct = (props) => {
           <div className={styles.content_container}>
             <div className={styles.content_header}>Conclusion</div>
             <div className={styles.content}>
-            To conclude, my journey with SportVot has been defined by my dedication to crafting seamless and scalable digital experiences for a complex ecosystem. Through innovative design solutions, continuous iterations, and close collaboration with cross-functional teams, I contributed to the platform's expansion and success. From building a comprehensive design system to refining user flows and creating an adaptable cloud studio dashboard, my work not only drove user engagement but also supported SportVot’s business objectives, establishing it as a key player in the global sports production space.
+              To conclude, my journey with SportVot has been defined by my
+              dedication to crafting seamless and scalable digital experiences
+              for a complex ecosystem. Through innovative design solutions,
+              continuous iterations, and close collaboration with
+              cross-functional teams, I contributed to the platform's expansion
+              and success. From building a comprehensive design system to
+              refining user flows and creating an adaptable cloud studio
+              dashboard, my work not only drove user engagement but also
+              supported SportVot’s business objectives, establishing it as a key
+              player in the global sports production space.
             </div>
           </div>
         </div>
       </main>
+      <Contact/>
     </>
   );
 };
