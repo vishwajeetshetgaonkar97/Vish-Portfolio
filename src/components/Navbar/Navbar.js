@@ -17,6 +17,10 @@ const Navbar = ({ isProject = false }) => {
     }
   };
   const [isOpen, setIsOpen] = useState(false);
+ // Function to close the menu
+ const closeMenu = () => {
+  setIsOpen(false);
+};
 
   return (
     <>
@@ -49,13 +53,13 @@ const Navbar = ({ isProject = false }) => {
             isOpen ? styles.linksContainerActive : ""
           }`}
         >
-          <Link href="/#work" scroll={false} className={styles.topNavButton}>
+          <Link href="/#work"  onClick={closeMenu} scroll={false} className={styles.topNavButton}>
             Work
           </Link>
-          <Link href="/#about" className={styles.topNavButton}>
+          <Link href="/#about" onClick={closeMenu} className={styles.topNavButton}>
             About
           </Link>
-          <Link href="#contact" scroll={false} className={styles.topNavButton}>
+          <Link href="#contact" onClick={closeMenu} scroll={false} className={styles.topNavButton}>
             Contact
           </Link>
         </div>

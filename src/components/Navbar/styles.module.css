@@ -49,6 +49,11 @@
     margin: 35% 1.5%;
     padding: 2vh;
     font-size: 2.6vh;
+    
+    }
+
+    .navbar{
+  
     }
 
     .logo{
@@ -58,7 +63,7 @@
     }
 
     .back{
-height: 2vh;
+height: 3vh;
 width: auto;
     }
 
