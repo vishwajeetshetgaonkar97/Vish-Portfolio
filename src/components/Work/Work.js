@@ -71,7 +71,7 @@ const Work = (props) => {
   }, [tabSelected]);
 
   return (
-    <div id="work" className={`flex flex-col w-full content-center items-center pb-6`}>
+    <div id="work" className={`flex flex-col w-full content-center items-center md:px-0 px-2 pb-6`}>
       <h1
         ref={headingRef}
         className={`${styles.heading} font-bold uppercase ${
