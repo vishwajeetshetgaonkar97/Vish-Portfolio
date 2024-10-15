@@ -24,6 +24,7 @@ const Loader = () => (
 
 const SplineBg = (props) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
   const [hasSplineError, setHasSplineError] = useState(false);
   const [isSplineLoaded, setIsSplineLoaded] = useState(false);
   const splineApp = useRef(null); // Create a ref to hold the Spline application instance
@@ -32,12 +33,27 @@ const SplineBg = (props) => {
     setIsScrolled(window.scrollY > 5);
   }, []);
 
+  let resizeTimeout;
+  const handleResize = () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      React.startTransition(() => {
+        setIsMobile(window.innerWidth <= 768);
+      });
+    }, 150);
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+
+
+    
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
     };
-  }, [handleScroll]);
+  }, [handleScroll,handleResize]);
 
   const handleSplineError = useCallback(() => {
     setHasSplineError(true);
@@ -64,8 +80,13 @@ const SplineBg = (props) => {
       <Suspense fallback={<Loader />}>
         {!hasSplineError && ( // Render Spline if no error occurred
           <Spline
-            className="fixed top-0 left-0 h-screen w-screen z-0"
-            scene="https://prod.spline.design/Qp0S9wS3ub91mSAr/scene.splinecode"
+            className={styles.splineBg}
+            scene={
+              isMobile
+                ? 
+                 "https://prod.spline.design/FqX6L1EVkA7Fjp51/scene.splinecode" // Desktop scene
+                :"https://prod.spline.design/Qp0S9wS3ub91mSAr/scene.splinecode" // Mobile scene
+            }
             onError={handleSplineError} // Call the error handler if something goes wrong
             onLoad={onLoad} // Pass the onLoad function here
           />
