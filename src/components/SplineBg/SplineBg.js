@@ -49,6 +49,13 @@ const SplineBg = (props) => {
     setIsSplineLoaded(true); // Set Spline as loaded
   }, []);
 
+  const socialMediaLinks = [
+    { platform: "linkedin", url: "https://www.linkedin.com/in/vishwajeet-shetgaonkar" },
+    { platform: "twitter", url: "https://twitter.com/vshetgaonkar97" },
+    { platform: "behance", url: "https://www.behance.net/yourprofile" },
+    { platform: "github", url: "https://github.com/vishwajeetshetgaonkar97" },
+  ];
+
   return (
     <div className={styles.container}>
       {/* Always show loader initially */}
@@ -85,15 +92,22 @@ const SplineBg = (props) => {
               isScrolled ? styles.hidden : ""
             }`}
           >
-            {["linkedin", "twitter", "behance", "github"].map((platform) => (
-              <Image
+            {socialMediaLinks.map(({ platform, url }) => (
+              <a
                 key={platform}
-                className={styles.socialIcon}
-                src={`/socialMedia/${platform}.png`}
-                height={27}
-                width={27}
-                alt={platform}
-              />
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.socialLink} // Optional: Add styles for the links
+              >
+                <Image
+                  className={styles.socialIcon}
+                  src={`/socialMedia/${platform}.png`}
+                  height={27}
+                  width={27}
+                  alt={platform}
+                />
+              </a>
             ))}
           </div>
         </>

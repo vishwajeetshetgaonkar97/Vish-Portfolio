@@ -9,10 +9,10 @@ const Contact = (props) => {
   const emailRef = useRef(null);
 
   const socialMediaLinks = [
-    { platform: "linkedin", url: "https://www.linkedin.com/in/yourprofile" },
-    { platform: "twitter", url: "https://twitter.com/yourprofile" },
+    { platform: "linkedin", url: "https://www.linkedin.com/in/vishwajeet-shetgaonkar" },
+    { platform: "twitter", url: "https://twitter.com/vshetgaonkar97" },
     { platform: "behance", url: "https://www.behance.net/yourprofile" },
-    { platform: "github", url: "https://github.com/yourprofile" },
+    { platform: "github", url: "https://github.com/vishwajeetshetgaonkar97" },
   ];
 
   useEffect(() => {

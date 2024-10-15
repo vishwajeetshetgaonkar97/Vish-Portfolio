@@ -24,11 +24,10 @@ export default function Home() {
 
         <main className={` flex flex-col relative z-1 `}>
           <Work />
-          <About/>
-          <Certificate/>
-          
+          <About />
+          <Certificate />
         </main>
-        <Contact/>
+        <Contact />
       </div>
     </>
   );
