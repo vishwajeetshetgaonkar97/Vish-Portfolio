@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 import Head from "next/head";
 import Image from "next/image";
 import Navbar from "@/components/Navbar/Navbar";
+import Contact from "@/components/Contact/Contact";
 
 const SarvaDashboard = (props) => {
   const iframeRef = useRef(null);
@@ -196,6 +197,7 @@ const SarvaDashboard = (props) => {
           </div>
         </div>
       </main>
+      <Contact/>
     </>
   );
 };

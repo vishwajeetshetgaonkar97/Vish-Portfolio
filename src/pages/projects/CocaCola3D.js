@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 import Head from "next/head";
 import Image from "next/image";
 import Navbar from "@/components/Navbar/Navbar";
+import Contact from "@/components/Contact/Contact";
 
 const CocaCola3D = (props) => {
   const iframeRef = useRef(null);
@@ -189,6 +190,7 @@ const CocaCola3D = (props) => {
           </div>
         </div>
       </main>
+      <Contact/>
     </>
   );
 };

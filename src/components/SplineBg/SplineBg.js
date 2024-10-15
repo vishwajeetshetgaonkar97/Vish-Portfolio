@@ -24,7 +24,7 @@ const Loader = () => (
 
 const SplineBg = (props) => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobile, setIsMobile] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
   const [hasSplineError, setHasSplineError] = useState(false);
   const [isSplineLoaded, setIsSplineLoaded] = useState(false);
   const splineApp = useRef(null); // Create a ref to hold the Spline application instance
@@ -33,27 +33,22 @@ const SplineBg = (props) => {
     setIsScrolled(window.scrollY > 5);
   }, []);
 
-  let resizeTimeout;
-  const handleResize = () => {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(() => {
-      React.startTransition(() => {
-        setIsMobile(window.innerWidth <= 768);
-      });
-    }, 150);
-  };
+  const handleResize = useCallback(() => {
+    setIsMobile(window.innerWidth >= 768);
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
 
+    // Initial call to handleResize to set mobile state correctly
+    handleResize();
 
-    
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
     };
-  }, [handleScroll,handleResize]);
+  }, [handleScroll, handleResize]);
 
   const handleSplineError = useCallback(() => {
     setHasSplineError(true);
@@ -83,9 +78,8 @@ const SplineBg = (props) => {
             className={styles.splineBg}
             scene={
               isMobile
-                ? 
-                 "https://prod.spline.design/FqX6L1EVkA7Fjp51/scene.splinecode" // Desktop scene
-                :"https://prod.spline.design/Qp0S9wS3ub91mSAr/scene.splinecode" // Mobile scene
+                ? "https://prod.spline.design/Qp0S9wS3ub91mSAr/scene.splinecode" // Mobile scene
+                : "https://prod.spline.design/FqX6L1EVkA7Fjp51/scene.splinecode" // Desktop scene
             }
             onError={handleSplineError} // Call the error handler if something goes wrong
             onLoad={onLoad} // Pass the onLoad function here

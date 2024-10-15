@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 import Head from "next/head";
 import Image from "next/image";
 import Navbar from "@/components/Navbar/Navbar";
+import Contact from "@/components/Contact/Contact";
 
 const AlbumCovers = (props) => {
   return (
@@ -174,6 +175,7 @@ const AlbumCovers = (props) => {
           </div>
         </div>
       </main>
+      <Contact/>
     </>
   );
 };

@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 import Head from "next/head";
 import Image from "next/image";
 import Navbar from "@/components/Navbar/Navbar";
+import Contact from "@/components/Contact/Contact";
 
 const SvPlay = (props) => {
   return (
@@ -255,6 +256,7 @@ const SvPlay = (props) => {
           </div>
         </div>
       </main>
+      <Contact/>
     </>
   );
 };

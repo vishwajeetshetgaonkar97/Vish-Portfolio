@@ -23,6 +23,8 @@
 
 .navList{
   display: flex;
+  width: 100%;
+  justify-content: end;
 }
 
 .navListItems{
@@ -53,6 +55,11 @@
       height: 4vh;
       width: auto;
       z-index: 999;
+    }
+
+    .back{
+height: 1vh;
+width: auto;
     }
 
     .email{
