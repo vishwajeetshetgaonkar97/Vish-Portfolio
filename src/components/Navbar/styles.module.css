@@ -19,6 +19,27 @@
 
 }
 
+
+
+.navList{
+  display: flex;
+}
+
+.navListItems{
+  list-style: none;
+  padding: 0 0.7vw;
+  text-transform: capitalize;
+  font-size: 2.6vh;
+}
+
+.navListItems:hover{
+ opacity: 0.7;
+}
+
+.linksBurgerContainer {
+  display: none;
+}
+
 @media only screen and (max-width: 800px) {
   .main_container{
     top:6vh;
@@ -28,6 +49,11 @@
     font-size: 2.6vh;
     }
 
+    .logo{
+      height: 4vh;
+      width: auto;
+      z-index: 999;
+    }
 
     .email{
       font-size: 4vh;
@@ -36,6 +62,59 @@
     }
     
 
+
+    .linksBurgerContainer {
+      display: flex;
+      width: 84vw;
+      justify-content: flex-end;
+      padding-right: 2vw;
+    }
+
+    .burgerIcon {
+      height: 4vh;
+      width: 4vh;
+    }
+  
+    .closeIcon{
+      height: 3vh;
+      width: 3vh;
+      position: relative;
+      z-index: 88;
+    }
+    .navListItems{
+      padding: 2vh 0.7vw;
+     font-weight: 600;
+  }
     
+.navList {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  padding-left: 0vw;
+  justify-content: center;
+  align-items: center;
+  top: -100vh;
+  left: 0;
+  flex-direction: column;
+  background: linear-gradient(#2626269a, rgba(75, 75, 75, 0.29));
+  backdrop-filter: blur(12px);
+  transition: all 0.5s ease-in-out;
+  padding-bottom: 5vh;
+  z-index: 2;
+}
+.linksContainerActive{
+  top: 0vh;
+    }
+    
+    .topNavButton{
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      font-weight: 600;
+      opacity: 0.9;
+      cursor: pointer;
+      transition: all  0.3s ease;
+      padding: 1.2rem 0rem;
+    
+    }
 
 }
