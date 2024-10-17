@@ -1,9 +1,21 @@
+.wrapContainer{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  gap: 0.5rem;
+  padding-top: 0vh;
+  padding: 0 12vw;
+  align-items: center;
+}
+
 .heading{
   color: #a6a6a6;
   color: #f5f5f592;
     /* -webkit-text-stroke-width: 1.4px;
     -webkit-text-stroke-color: rgba(255, 255, 255, 0.868); */
-    font-size: 2rem;
+    font-size:1.8rem;
     font-weight: 800;
     /* text-transform: capitalize; */
 }
@@ -11,7 +23,7 @@
 .heading span{
   color: #ffffff;
   text-transform: uppercase;
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 800;
 }
 
