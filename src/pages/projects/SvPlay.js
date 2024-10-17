@@ -174,14 +174,25 @@ const SvPlay = (props) => {
           <div className={styles.content_container}>
             <div className={styles.content_header}>Mockups</div>
 
-            <Image
-              className={`${styles.mockupImage} w-full h-auto mt-4`}
-              layout="responsive"
-              width={1920}
-              height={1080}
-              src="/work/svplay/p1.png"
-              alt="svplay"
-            />
+            {isMobile ? (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto mt-4`}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/svplay/m1.png"
+                alt="svplay"
+              />
+            ) : (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto mt-4`}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/svplay/p1.png"
+                alt="svplay"
+              />
+            )}
 
             <Image
               className={`${styles.mockupImage} w-full h-auto mt-4`}
@@ -210,14 +221,25 @@ const SvPlay = (props) => {
               alt="svplay"
             />
 
-            <Image
-              className={`${styles.mockupImage} w-full h-auto mt-4`}
-              layout="responsive"
-              width={1920}
-              height={1080}
-              src="/work/svplay/f4.png"
-              alt="svplay"
-            />
+            {isMobile ? (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto mt-4`}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/svplay/m2.png"
+                alt="svplay"
+              />
+            ) : (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto mt-4`}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/svplay/f4.png"
+                alt="svplay"
+              />
+            )}
           </div>
 
           <div className={styles.content_container}>

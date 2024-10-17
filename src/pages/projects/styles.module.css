@@ -154,13 +154,14 @@ flex-direction: column;
 .role,.content_header,.content_sub_header{
   font-size: 1.2rem;
   padding-bottom: 0.4rem;
+  
 }
 
 .content_sub_header{
   font-size: 1rem;
 }
 .role_description_containers ul, .content{
- 
+ font-size: 1.2rem;
   padding: 0rem 0rem 0.3rem 0rem;
 }
 
