@@ -6,6 +6,7 @@ import React, {
   Suspense,
   useCallback,
   useRef,
+  startTransition,
 } from "react";
 
 const Spline = React.lazy(() => import("@splinetool/react-spline"));
@@ -30,11 +31,15 @@ const SplineBg = (props) => {
   const splineApp = useRef(null); // Create a ref to hold the Spline application instance
 
   const handleScroll = useCallback(() => {
-    setIsScrolled(window.scrollY > 5);
+    startTransition(() => {
+      setIsScrolled(window.scrollY > 5);
+    });
   }, []);
 
   const handleResize = useCallback(() => {
-    setIsMobile(window.innerWidth >= 768);
+    startTransition(() => {
+      setIsMobile(window.innerWidth <= 800);
+    });
   }, []);
 
   useEffect(() => {
@@ -51,13 +56,17 @@ const SplineBg = (props) => {
   }, [handleScroll, handleResize]);
 
   const handleSplineError = useCallback(() => {
-    setHasSplineError(true);
+    startTransition(() => {
+      setHasSplineError(true);
+    });
   }, []);
 
   // This function will run when the Spline scene loads
   const onLoad = useCallback((spline) => {
     splineApp.current = spline; // Save the Spline app instance in the ref
-    setIsSplineLoaded(true); // Set Spline as loaded
+    startTransition(() => {
+      setIsSplineLoaded(true); // Set Spline as loaded
+    });
   }, []);
 
   const socialMediaLinks = [
@@ -70,7 +79,7 @@ const SplineBg = (props) => {
   return (
     <div className={styles.container}>
       {/* Always show loader initially */}
-      {!isSplineLoaded && !hasSplineError && <Loader />}
+      {!isSplineLoaded && !hasSplineError  && <Loader />}
 
       <Suspense fallback={<Loader />}>
         {!hasSplineError && ( // Render Spline if no error occurred
@@ -78,11 +87,11 @@ const SplineBg = (props) => {
             className={styles.splineBg}
             scene={
               isMobile
-                ? "https://prod.spline.design/Qp0S9wS3ub91mSAr/scene.splinecode" // Mobile scene
-                : "https://prod.spline.design/FqX6L1EVkA7Fjp51/scene.splinecode" // Desktop scene
+                ? "https://prod.spline.design/dnQzzwqu2r542cRY/scene.splinecode" 
+                : "https://prod.spline.design/dnQzzwqu2r542cRY/scene.splinecode" 
             }
-            onError={handleSplineError} // Call the error handler if something goes wrong
-            onLoad={onLoad} // Pass the onLoad function here
+            onError={handleSplineError} 
+            onLoad={onLoad} 
           />
         )}
 

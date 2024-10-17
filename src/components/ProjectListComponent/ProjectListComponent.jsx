@@ -12,27 +12,27 @@ const ProjectListComponent = ({
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        setIsVisible(entry.isIntersecting);
-      },
-      {
-        threshold: 0.4, // Trigger when 10% of the element is visible
-      }
-    );
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       const entry = entries[0];
+  //       setIsVisible(entry.isIntersecting);
+  //     },
+  //     {
+  //       threshold: 0.4, // Trigger when 10% of the element is visible
+  //     }
+  //   );
 
-    if (cardRef.current) {
-      observer.observe(cardRef.current);
-    }
+  //   if (cardRef.current) {
+  //     observer.observe(cardRef.current);
+  //   }
 
-    return () => {
-      if (cardRef.current) {
-        observer.unobserve(cardRef.current);
-      }
-    };
-  }, []);
+  //   return () => {
+  //     if (cardRef.current) {
+  //       observer.unobserve(cardRef.current);
+  //     }
+  //   };
+  // }, []);
 
   return (
     <div
