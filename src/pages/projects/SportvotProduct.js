@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./styles.module.css";
 import Head from "next/head";
 import Image from "next/image";
 import Navbar from "@/components/Navbar/Navbar";
 import Contact from "@/components/Contact/Contact";
-import ProductOptionsComponents from './../../components/ProjectsOptionsComponent/ProjectsOptionsComponent'
-
+import ProductOptionsComponents from "./../../components/ProjectsOptionsComponent/ProjectsOptionsComponent";
 
 const SportvotProduct = (props) => {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth >= 800);
+    };
 
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <>
       <Head>
@@ -154,14 +166,25 @@ const SportvotProduct = (props) => {
           </div>
 
           <div className={styles.content_container}>
-            <Image
-              className={`${styles.mockupImage} w-full h-auto `}
-              layout="responsive"
-              width={1920}
-              height={1080}
-              src="/work/sportvot/p1.png"
-              alt="svplay"
-            />
+            {isMobile ? (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto `}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/sportvot/p1.png"
+                alt="svplay"
+              />
+            ) : (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto `}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/sportvot/m1.png"
+                alt="svplay"
+              />
+            )}
             <div className={styles.content}>
               <br />
               To ensure consistency across SportVot’s entire product ecosystem,
@@ -378,10 +401,10 @@ const SportvotProduct = (props) => {
             </div>
           </div>
         </div>
-        <ProductOptionsComponents/>
+        <ProductOptionsComponents />
       </main>
 
-      <Contact/>
+      <Contact />
     </>
   );
 };
