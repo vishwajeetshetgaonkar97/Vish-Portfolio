@@ -44,10 +44,9 @@
 //         },
 
 //     ];
-
 const projectsList = [
   {
-    id: 2,
+    id: 1,
     name: "Elevating SportVot's Live Production & Streaming Experience",
     description:
       "I spearheaded the design efforts for SportVot, collaborating with cross-functional teams to create user-friendly interfaces across our website, OTT platform, mobile app, and cloud studio dashboard. This comprehensive approach included user research and usability testing to inform design decisions and ensure a seamless experience.",
@@ -57,7 +56,7 @@ const projectsList = [
     tags: " UI, UX, Product , Web, OTT, Mobile App, Dashboard",
   },
   {
-    id: 3,
+    id: 2,
     name: "Sv-Play",
     description:
       "A turf booking app designed for local users, offering seamless sharing across multiple platforms.",
@@ -67,17 +66,17 @@ const projectsList = [
     tags: " UI, UX, Mobile App",
   },
   {
-    id: 4,
+    id: 3,
     name: "Nienkämper Ar App",
     description:
-      "A turf booking app for users in their locality with the capability to share it on multiple platforms",
+      "A turf booking app for users in their locality with the capability to share it on multiple platforms.",
     image: "/work/ar_app/mockup.png",
     link: "/projects/Ar_app",
     category: "D",
     tags: "UI, UX, Mobile App",
   },
   {
-    id: 5,
+    id: 4,
     name: "3D Coca-Cola Website Concept",
     description:
       "A modern and engaging digital experience that leverages trending 3D immersive technologies.",
@@ -87,8 +86,8 @@ const projectsList = [
     tags: "Dev, Next.js, 3D, Spline",
   },
   {
-    id: 8,
-    name: "3d Portfolio Concept",
+    id: 5,
+    name: "3D Portfolio Concept",
     description:
       "A dashboard for displaying air quality conditions for buildings and surrounding areas on a map, along with additional relevant information.",
     image: "/work/threeJsPortfolio/mockup.png",
@@ -136,6 +135,6 @@ const projectsList = [
     category: "O",
     tags: "Graphic Design, Album Art, Illustration",
   },
-  
 ];
 export default projectsList;
+

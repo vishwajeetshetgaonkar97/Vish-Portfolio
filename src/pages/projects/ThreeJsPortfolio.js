@@ -4,6 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Navbar from "@/components/Navbar/Navbar";
 import Contact from "@/components/Contact/Contact";
+import ProductOptionsComponents from './../../components/ProjectsOptionsComponent/ProjectsOptionsComponent'
 
 const ThreeJsPortfolio = (props) => {
   const iframeRef = useRef(null);
@@ -194,6 +195,7 @@ const ThreeJsPortfolio = (props) => {
             </div>
           </div>
         </div>
+        <ProductOptionsComponents/>
       </main>
       <Contact/>
     </>

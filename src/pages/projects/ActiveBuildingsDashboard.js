@@ -4,6 +4,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Navbar from "@/components/Navbar/Navbar";
 import Contact from "@/components/Contact/Contact";
+import ProductOptionsComponents from './../../components/ProjectsOptionsComponent/ProjectsOptionsComponent'
+
 
 const ActiveBuildingsDashboard = (props) => {
   const iframeRef = useRef(null);
@@ -203,6 +205,8 @@ const ActiveBuildingsDashboard = (props) => {
             </div>
           </div>
         </div>
+        
+        <ProductOptionsComponents/>
       </main>
       <Contact/>
     </>

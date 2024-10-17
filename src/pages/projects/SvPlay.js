@@ -4,6 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Navbar from "@/components/Navbar/Navbar";
 import Contact from "@/components/Contact/Contact";
+import ProductOptionsComponents from './../../components/ProjectsOptionsComponent/ProjectsOptionsComponent'
 
 const SvPlay = (props) => {
   return (
@@ -255,6 +256,7 @@ const SvPlay = (props) => {
             </div>
           </div>
         </div>
+        <ProductOptionsComponents/>
       </main>
       <Contact/>
     </>
