@@ -1,12 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./styles.module.css";
 import Head from "next/head";
 import Image from "next/image";
 import Navbar from "@/components/Navbar/Navbar";
 import Contact from "@/components/Contact/Contact";
-import ProductOptionsComponents from './../../components/ProjectsOptionsComponent/ProjectsOptionsComponent'
+import ProductOptionsComponents from "./../../components/ProjectsOptionsComponent/ProjectsOptionsComponent";
 
 const SvPlay = (props) => {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 800);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <Head>
@@ -27,14 +42,25 @@ const SvPlay = (props) => {
             </div>
           </div>
 
-          <Image
-            className={`${styles.mockupImage} w-full h-auto`}
-            layout="responsive"
-            width={1920}
-            height={1080}
-            src="/work/svplay/svplayHero.png"
-            alt="svplay"
-          />
+          {isMobile ? (
+            <Image
+              className={`${styles.mockupImage} w-full h-auto`}
+              layout="responsive"
+              width={1920}
+              height={1080}
+              src="/work/svplay/mm1.png"
+              alt="svplay"
+            />
+          ) : (
+            <Image
+              className={`${styles.mockupImage} w-full h-auto`}
+              layout="responsive"
+              width={1920}
+              height={1080}
+              src="/work/svplay/svplayHero.png"
+              alt="svplay"
+            />
+          )}
 
           <div className={styles.role_container}>
             <div className={styles.sub_role_container}>
@@ -256,9 +282,9 @@ const SvPlay = (props) => {
             </div>
           </div>
         </div>
-        <ProductOptionsComponents/>
+        <ProductOptionsComponents />
       </main>
-      <Contact/>
+      <Contact />
     </>
   );
 };

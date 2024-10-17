@@ -21,6 +21,7 @@ const SportvotProduct = (props) => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  
   return (
     <>
       <Head>
