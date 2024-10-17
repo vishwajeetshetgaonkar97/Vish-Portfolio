@@ -10,7 +10,7 @@ const SportvotProduct = (props) => {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth >= 800);
+      setIsMobile(window.innerWidth <= 800);
     };
 
     handleResize();
@@ -41,14 +41,25 @@ const SportvotProduct = (props) => {
             </div>
           </div>
 
-          <Image
-            className={`${styles.mockupImage} w-full h-auto`}
-            layout="responsive"
-            width={1920}
-            height={1080}
-            src="/work/sportvot/mockup.png"
-            alt="svplay"
-          />
+          {isMobile ? (
+            <Image
+              className={`${styles.mockupImage} w-full h-auto`}
+              layout="responsive"
+              width={1920}
+              height={1080}
+              src="/work/sportvot/mMockup.png"
+              alt="svplay"
+            />
+          ) : (
+            <Image
+              className={`${styles.mockupImage} w-full h-auto`}
+              layout="responsive"
+              width={1920}
+              height={1080}
+              src="/work/sportvot/mockup.png"
+              alt="svplay"
+            />
+          )}
 
           <div className={styles.role_container}>
             <div className={styles.sub_role_container}>
@@ -172,7 +183,7 @@ const SportvotProduct = (props) => {
                 layout="responsive"
                 width={1920}
                 height={1080}
-                src="/work/sportvot/p1.png"
+                src="/work/sportvot/m1.png"
                 alt="svplay"
               />
             ) : (
@@ -181,7 +192,7 @@ const SportvotProduct = (props) => {
                 layout="responsive"
                 width={1920}
                 height={1080}
-                src="/work/sportvot/m1.png"
+                src="/work/sportvot/p1.png"
                 alt="svplay"
               />
             )}
@@ -217,14 +228,25 @@ const SportvotProduct = (props) => {
               visually cohesive and easy to maintain.
             </div>
             <div className={`${styles.content_header} mt-6`}>Website</div>
-            <Image
-              className={`${styles.mockupImage} w-full h-auto mt-2`}
-              layout="responsive"
-              width={1920}
-              height={1080}
-              src="/work/sportvot/p2.png"
-              alt="svplay"
-            />
+            {isMobile ? (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto mt-2`}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/sportvot/m2.png"
+                alt="svplay"
+              />
+            ) : (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto mt-2`}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/sportvot/p2.png"
+                alt="svplay"
+              />
+            )}
             <div className={styles.content}>
               <br />
               Over the years, the SportVot website has undergone multiple
@@ -240,14 +262,25 @@ const SportvotProduct = (props) => {
               product.
             </div>
             <div className={`${styles.content_header} mt-6`}>OTT</div>
-            <Image
-              className={`${styles.mockupImage} w-full h-auto mt-2`}
-              layout="responsive"
-              width={1920}
-              height={1080}
-              src="/work/sportvot/p3.png"
-              alt="svplay"
-            />
+            {isMobile ? (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto mt-2`}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/sportvot/m3.png"
+                alt="svplay"
+              />
+            ) : (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto mt-2`}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/sportvot/p3.png"
+                alt="svplay"
+              />
+            )}
             <div className={styles.content}>
               <br />
               The OTT platform has also seen multiple iterations and targeted
@@ -265,14 +298,25 @@ const SportvotProduct = (props) => {
             </div>
 
             <div className={`${styles.content_header} mt-6`}>App</div>
-            <Image
-              className={`${styles.mockupImage} w-full h-auto mt-2`}
-              layout="responsive"
-              width={1920}
-              height={1080}
-              src="/work/sportvot/p4.png"
-              alt="svplay"
-            />
+            {isMobile ? (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto mt-2`}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/sportvot/m4.png"
+                alt="svplay"
+              />
+            ) : (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto mt-2`}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/sportvot/p4.png"
+                alt="svplay"
+              />
+            )}
             <div className={styles.content}>
               <br />
               The app has also evolved through multiple iterations, with a key
@@ -287,14 +331,25 @@ const SportvotProduct = (props) => {
             <div className={`${styles.content_header} mt-6`}>
               Cloud Studio Dashboard
             </div>
-            <Image
-              className={`${styles.mockupImage} w-full h-auto mt-4`}
-              layout="responsive"
-              width={1920}
-              height={1080}
-              src="/work/sportvot/p5.png"
-              alt="svplay"
-            />
+            {isMobile ? (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto mt-4`}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/sportvot/m5.png"
+                alt="svplay"
+              />
+            ) : (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto mt-4`}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/sportvot/p5.png"
+                alt="svplay"
+              />
+            )}
             <div className={styles.content}>
               <br />
               The cloud studio dashboard has evolved to support scoring for over
@@ -375,14 +430,25 @@ const SportvotProduct = (props) => {
               the future needs of the product. This ensured a more scalable,
               user-friendly, and visually engaging platform for the long term.{" "}
             </div>
-            <Image
-              className={`${styles.mockupImage} w-full h-auto mt-6`}
-              layout="responsive"
-              width={1920}
-              height={1080}
-              src="/work/sportvot/iterations.png"
-              alt="svplay"
-            />
+            {isMobile ? (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto mt-6`}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/sportvot/m6.png"
+                alt="svplay"
+              />
+            ) : (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto mt-6`}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/sportvot/iterations.png"
+                alt="svplay"
+              />
+            )}
           </div>
 
           <div className={styles.content_container}>
