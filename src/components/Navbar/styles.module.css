@@ -119,4 +119,19 @@
     transition: all 0.3s ease;
     padding: 1.2rem 0rem;
   }
+
+  .socialMedia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2rem;
+    padding-top: 2vh;
+  }
+
+  .socialIcon {
+    height: 4vh;
+    width: 4vh;
+  }
+ 
 }

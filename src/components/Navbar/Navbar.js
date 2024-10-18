@@ -22,6 +22,16 @@ const Navbar = ({ isProject = false }) => {
   setIsOpen(false);
 };
 
+const socialMediaLinks = [
+  {
+    platform: "linkedin",
+    url: "https://www.linkedin.com/in/vishwajeet-shetgaonkar",
+  },
+  { platform: "twitter", url: "https://twitter.com/vshetgaonkar97" },
+  { platform: "behance", url: "https://www.behance.net/yourprofile" },
+  { platform: "github", url: "https://github.com/vishwajeetshetgaonkar97" },
+];
+
   return (
     <>
       <nav
@@ -62,6 +72,27 @@ const Navbar = ({ isProject = false }) => {
           <Link href="#contact" onClick={closeMenu} scroll={false} className={styles.topNavButton}>
             Contact
           </Link>
+<div className={styles.socialMedia} >
+
+
+          {socialMediaLinks.map(({ platform, url }) => (
+              <a
+                key={platform}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.socialLink} 
+              >
+                <Image
+                  className={styles.socialIcon}
+                  src={`/socialMedia/${platform}.png`}
+                  height={27}
+                  width={27}
+                  alt={platform}
+                />
+              </a>
+            ))}
+</div>
         </div>
       </nav>
     </>

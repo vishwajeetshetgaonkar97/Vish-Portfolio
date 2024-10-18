@@ -125,7 +125,7 @@ const SplineBg = (props) => {
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={styles.socialLink} // Optional: Add styles for the links
+                className={styles.socialLink} 
               >
                 <Image
                   className={styles.socialIcon}
