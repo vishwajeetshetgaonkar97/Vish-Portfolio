@@ -179,9 +179,10 @@
     align-items: center;
     justify-content: center;
 
-    top: 38vh;
+    bottom: 18vh;
     gap: 2rem;
     opacity: 1;
+    display: none;
   }
   .socialIcon {
     height: 4vh;
