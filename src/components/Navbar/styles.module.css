@@ -38,6 +38,12 @@
   display: none;
 }
 
+.socialMedia {
+
+  display: none;
+}
+
+
 @media only screen and (max-width: 800px) {
   .main_container {
     top: 6vh;
