@@ -5,14 +5,14 @@
 }
 
 .subheading {
-  font-weight: 600;
-  font-size: 1.2rem;
-  text-shadow: rgba(255, 255, 255, 0.7) 0px 0px 2px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  /* text-shadow: rgba(255, 255, 255, 0.7) 0px 0px 2px; */
   opacity: 1;
   background: -webkit-linear-gradient(45deg, #ffffff, #dfdfdfc3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding-bottom: 1vh;
+  padding-bottom: 0vh;
 }
 
 .container {
