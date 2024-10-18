@@ -70,7 +70,10 @@ const SplineBg = (props) => {
   }, []);
 
   const socialMediaLinks = [
-    { platform: "linkedin", url: "https://www.linkedin.com/in/vishwajeet-shetgaonkar" },
+    {
+      platform: "linkedin",
+      url: "https://www.linkedin.com/in/vishwajeet-shetgaonkar",
+    },
     { platform: "twitter", url: "https://twitter.com/vshetgaonkar97" },
     { platform: "behance", url: "https://www.behance.net/yourprofile" },
     { platform: "github", url: "https://github.com/vishwajeetshetgaonkar97" },
@@ -79,19 +82,19 @@ const SplineBg = (props) => {
   return (
     <div className={styles.container}>
       {/* Always show loader initially */}
-      {!isSplineLoaded && !hasSplineError  && <Loader />}
+      {!isSplineLoaded && !hasSplineError && <Loader />}
 
       <Suspense fallback={<Loader />}>
-        {!hasSplineError && ( // Render Spline if no error occurred
+        {!hasSplineError && (
           <Spline
             className={styles.splineBg}
             scene={
               isMobile
-                ? "https://prod.spline.design/dnQzzwqu2r542cRY/scene.splinecode" 
-                : "https://prod.spline.design/dnQzzwqu2r542cRY/scene.splinecode" 
+                ? "https://prod.spline.design/nhViJ0PYOK0pJXmR/scene.splinecode"
+                : "https://prod.spline.design/dnQzzwqu2r542cRY/scene.splinecode"
             }
-            onError={handleSplineError} 
-            onLoad={onLoad} 
+            onError={handleSplineError}
+            onLoad={onLoad}
           />
         )}
 
