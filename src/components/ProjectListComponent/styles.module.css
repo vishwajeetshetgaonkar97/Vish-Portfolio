@@ -19,9 +19,8 @@
 }
 
 .cardWrapper img {
-  height: 40vh !important;
+  height: auto;
   width: calc(40vh * 16/9) !important;
-  aspect-ratio: 16 / 9 !important; 
   /* width: calc(27vh * (16 / 9)); */
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 0.5rem  0 0 0.5rem;

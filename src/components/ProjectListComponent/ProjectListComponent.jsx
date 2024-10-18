@@ -47,7 +47,7 @@ const ProjectListComponent = ({
       <Image src={imgUrl} alt="projectImage"   layout="responsive"
             width={1920}
             height={1080}
-            className={`${styles.projectImage} w-full h-auto md:w-auto md:h-[50vh]`}
+            className={`${styles.projectImage} w-full h-auto `}
               />
       <div className={styles.cardContent}>
         <div className={styles.cardWrapperHeading}>{projectName}</div>
