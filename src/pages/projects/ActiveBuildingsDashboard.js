@@ -34,6 +34,21 @@ const ActiveBuildingsDashboard = (props) => {
     };
   }, []);
 
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 800);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <Head>
@@ -53,14 +68,21 @@ const ActiveBuildingsDashboard = (props) => {
             </div> */}
           </div>
 
-          <Image
+   {isMobile?   <Image
+            className={`${styles.mockupImage} w-full h-auto`}
+            layout="responsive"
+            width={1920}
+            height={1080}
+            src="/work/activeBuildingDashboard/m1.png"
+            alt="svplay"
+          /> :       <Image
             className={`${styles.mockupImage} w-full h-auto`}
             layout="responsive"
             width={1920}
             height={1080}
             src="/work/activeBuildingDashboard/mockup.png"
             alt="svplay"
-          />
+          />}
 
           <div className={styles.role_container}>
             <div className={styles.sub_role_container}>
@@ -155,14 +177,21 @@ const ActiveBuildingsDashboard = (props) => {
               alt="svplay"
             />
 
-            <Image
+     { isMobile?  <Image
+              className={`${styles.mockupImage} w-full h-auto mt-6`}
+              layout="responsive"
+              width={1920}
+              height={1080}
+              src="/work/activeBuildingDashboard/m2.png"
+              alt="svplay"
+            />    :      <Image
               className={`${styles.mockupImage} w-full h-auto mt-6`}
               layout="responsive"
               width={1920}
               height={1080}
               src="/work/activeBuildingDashboard/p2.png"
               alt="svplay"
-            />
+            />}
             <br />
             <br />
             <div className={styles.content_header}>Project Highlights</div>

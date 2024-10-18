@@ -4,7 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Navbar from "@/components/Navbar/Navbar";
 import Contact from "@/components/Contact/Contact";
-import ProductOptionsComponents from './../../components/ProjectsOptionsComponent/ProjectsOptionsComponent'
+import ProductOptionsComponents from "./../../components/ProjectsOptionsComponent/ProjectsOptionsComponent";
 
 const SarvaDashboard = (props) => {
   const iframeRef = useRef(null);
@@ -33,6 +33,21 @@ const SarvaDashboard = (props) => {
     };
   }, []);
 
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 800);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <Head>
@@ -52,14 +67,25 @@ const SarvaDashboard = (props) => {
             </div> */}
           </div>
 
-          <Image
-            className={`${styles.mockupImage} w-full h-auto`}
-            layout="responsive"
-            width={1920}
-            height={1080}
-            src="/work/sarvaDashboard/mockup.png"
-            alt="svplay"
-          />
+          {isMobile ? (
+            <Image
+              className={`${styles.mockupImage} w-full h-auto`}
+              layout="responsive"
+              width={1920}
+              height={1080}
+              src="/work/sarvaDashboard/m1.png"
+              alt="svplay"
+            />
+          ) : (
+            <Image
+              className={`${styles.mockupImage} w-full h-auto`}
+              layout="responsive"
+              width={1920}
+              height={1080}
+              src="/work/sarvaDashboard/mockup.png"
+              alt="svplay"
+            />
+          )}
 
           <div className={styles.role_container}>
             <div className={styles.sub_role_container}>
@@ -136,14 +162,25 @@ const SarvaDashboard = (props) => {
           </div>
 
           <div className={styles.content_container}>
-            <Image
-              className={`${styles.mockupImage} w-full h-auto`}
-              layout="responsive"
-              width={1920}
-              height={1080}
-              src="/work/sarvaDashboard/p1.png"
-              alt="svplay"
-            />
+            {isMobile ? (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto`}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/sarvaDashboard/m2.png"
+                alt="svplay"
+              />
+            ) : (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto`}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/sarvaDashboard/p1.png"
+                alt="svplay"
+              />
+            )}
             <br />
 
             <div className={styles.content_header}>Project Highlights</div>
@@ -197,9 +234,9 @@ const SarvaDashboard = (props) => {
             </div>
           </div>
         </div>
-        <ProductOptionsComponents/>
+        <ProductOptionsComponents />
       </main>
-      <Contact/>
+      <Contact />
     </>
   );
 };

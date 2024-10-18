@@ -1,13 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./styles.module.css";
 import Head from "next/head";
 import Image from "next/image";
 import Navbar from "@/components/Navbar/Navbar";
 import Contact from "@/components/Contact/Contact";
-import ProductOptionsComponents from './../../components/ProjectsOptionsComponent/ProjectsOptionsComponent'
-
+import ProductOptionsComponents from "./../../components/ProjectsOptionsComponent/ProjectsOptionsComponent";
 
 const AlbumCovers = (props) => {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 800);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <Head>
@@ -21,17 +35,28 @@ const AlbumCovers = (props) => {
 
         <div className={styles.main_container}>
           <div className={styles.headingContainer}>
-            <div className={styles.heading}>Album Coverss</div>
+            <div className={styles.heading}>Album Covers's</div>
           </div>
 
-          <Image
-            className={`${styles.mockupImage} w-full h-auto`}
-            layout="responsive"
-            width={1920}
-            height={1080}
-            src="/work/AlbumCovers/mockup.png"
-            alt="AlbumCovers series"
-          />
+          {isMobile ? (
+            <Image
+              className={`${styles.mockupImage} w-full h-auto`}
+              layout="responsive"
+              width={1920}
+              height={1080}
+              src="/work/AlbumCovers/mMockup.png"
+              alt="AlbumCovers series"
+            />
+          ) : (
+            <Image
+              className={`${styles.mockupImage} w-full h-auto`}
+              layout="responsive"
+              width={1920}
+              height={1080}
+              src="/work/AlbumCovers/mockup.png"
+              alt="AlbumCovers series"
+            />
+          )}
 
           <div className={styles.role_container}>
             <div className={styles.sub_role_container}>
@@ -99,9 +124,9 @@ const AlbumCovers = (props) => {
               distinct music genres: vocal and pop, each with its own unique
               aesthetic and design language.
             </div>
-        
+
             <br />
-        
+
             <div className={styles.content_sub_header}>
               Vocal Genre Research
             </div>
@@ -114,14 +139,25 @@ const AlbumCovers = (props) => {
               attention to gradients or heavy visual effects, aligning with the
               clean and understated tone of the music.
             </div>
-            <Image
-              className={`${styles.mockupImage} w-full h-auto mt-2`}
-              layout="responsive"
-              width={1920}
-              height={1080}
-              src="/work/AlbumCovers/p1.png"
-              alt="AlbumCovers series"
-            />
+            {isMobile ? (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto mt-2`}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/AlbumCovers/pm1.png"
+                alt="AlbumCovers series"
+              />
+            ) : (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto mt-2`}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/AlbumCovers/p1.png"
+                alt="AlbumCovers series"
+              />
+            )}
             <br />
             <div className={styles.content_sub_header}>Pop Genre Research</div>
             <div className={styles.content}>
@@ -133,14 +169,25 @@ const AlbumCovers = (props) => {
               visually stimulating experience, making the album stand out in a
               crowded market.
             </div>
-            <Image
-              className={`${styles.mockupImage} w-full h-auto mt-2`}
-              layout="responsive"
-              width={1920}
-              height={1080}
-              src="/work/AlbumCovers/p2.png"
-              alt="AlbumCovers series"
-            />
+            {isMobile ? (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto mt-2`}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/AlbumCovers/pm2.png"
+                alt="AlbumCovers series"
+              />
+            ) : (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto mt-2`}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/AlbumCovers/p2.png"
+                alt="AlbumCovers series"
+              />
+            )}
             <br />
             <div className={styles.content_header}>
               Design & Development Challenges
@@ -176,9 +223,9 @@ const AlbumCovers = (props) => {
             </div>
           </div>
         </div>
-        <ProductOptionsComponents/>
+        <ProductOptionsComponents />
       </main>
-      <Contact/>
+      <Contact />
     </>
   );
 };

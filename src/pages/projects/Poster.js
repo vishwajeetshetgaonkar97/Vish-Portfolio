@@ -1,13 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./styles.module.css";
 import Head from "next/head";
 import Image from "next/image";
 import Navbar from "@/components/Navbar/Navbar";
 import Contact from "@/components/Contact/Contact";
-import ProductOptionsComponents from './../../components/ProjectsOptionsComponent/ProjectsOptionsComponent'
-
+import ProductOptionsComponents from "./../../components/ProjectsOptionsComponent/ProjectsOptionsComponent";
 
 const Poster = (props) => {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 800);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <Head>
@@ -24,14 +38,25 @@ const Poster = (props) => {
             <div className={styles.heading}>Everyday Poster Series</div>
           </div>
 
-          <Image
-            className={`${styles.mockupImage} w-full h-auto`}
-            layout="responsive"
-            width={1920}
-            height={1080}
-            src="/work/poster/mockup.png"
-            alt="poster series"
-          />
+          {isMobile ? (
+            <Image
+              className={`${styles.mockupImage} w-full h-auto`}
+              layout="responsive"
+              width={1920}
+              height={1080}
+              src="/work/poster/m1.png"
+              alt="poster series"
+            />
+          ) : (
+            <Image
+              className={`${styles.mockupImage} w-full h-auto`}
+              layout="responsive"
+              width={1920}
+              height={1080}
+              src="/work/poster/mockup.png"
+              alt="poster series"
+            />
+          )}
 
           <div className={styles.role_container}>
             <div className={styles.sub_role_container}>
@@ -113,14 +138,25 @@ const Poster = (props) => {
               activity in each poster.
             </div>
             <br />
-            <Image
-              className={`${styles.mockupImage} w-full h-auto`}
-              layout="responsive"
-              width={1920}
-              height={1080}
-              src="/work/poster/p1.png"
-              alt="poster series"
-            />
+            {isMobile ? (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto`}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/poster/m2.png"
+                alt="poster series"
+              />
+            ) : (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto`}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/poster/p1.png"
+                alt="poster series"
+              />
+            )}
             <br />
             <div className={styles.content_sub_header}>Inspiration 1</div>
             <div className={styles.content}>
@@ -194,9 +230,9 @@ const Poster = (props) => {
             </div>
           </div>
         </div>
-        <ProductOptionsComponents/>
+        <ProductOptionsComponents />
       </main>
-      <Contact/>
+      <Contact />
     </>
   );
 };
