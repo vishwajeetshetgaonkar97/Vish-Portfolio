@@ -28,7 +28,7 @@ const socialMediaLinks = [
     url: "https://www.linkedin.com/in/vishwajeet-shetgaonkar",
   },
   { platform: "twitter", url: "https://twitter.com/vshetgaonkar97" },
-  { platform: "behance", url: "https://www.behance.net/yourprofile" },
+  { platform: "dribbble", url: "https://dribbble.com/Shetgaonkar" },
   { platform: "github", url: "https://github.com/vishwajeetshetgaonkar97" },
 ];
 
