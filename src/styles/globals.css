@@ -24,8 +24,8 @@ body {
 
 main{
   max-width: 1920px;
-  margin: 100vh auto 0 auto; /* Centers the main content */
-  padding: 0 1rem; /* Optional padding to avoid content touching the edges */
+  margin: 100vh auto 0 auto; 
+  padding: 0 0rem;
 }
 
 @layer utilities {

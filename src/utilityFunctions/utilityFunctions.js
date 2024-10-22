@@ -69,7 +69,7 @@ const projectsList = [
     id: 3,
     name: "Nienkämper Ar App",
     description:
-      "A turf booking app for users in their locality with the capability to share it on multiple platforms.",
+      "Nienkämper is an internationally recognized designer and manufacturer of fine office furniture. Nienkämper is committed to being at the forefront of innovation; collaborating with forward-thinking designers; and pushing the boundaries of technology.",
     image: "/work/ar_app/mockup.png",
     link: "/projects/Ar_app",
     category: "D",
@@ -137,4 +137,3 @@ const projectsList = [
   },
 ];
 export default projectsList;
-

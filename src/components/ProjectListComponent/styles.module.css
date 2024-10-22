@@ -67,13 +67,14 @@
     }
 
     .cardWrapper img {
-      height: auto !important;
-      width: auto !important;
+      height: auto;
+      width: 100%;
       
     }
 
     .cardContent{
       width: 100%;
+      padding: 0.2vh 1vh;
     }
     
     

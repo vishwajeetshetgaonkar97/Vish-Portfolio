@@ -8,7 +8,10 @@
   padding: 8vh 4vw 5vh 4vw;
   max-width: 100vw;
 }
-
+.contentPoints{
+  list-style: disc;
+  padding: 0 1vw;
+}
 .headingContainer{
 display: flex;
 justify-content: center;
