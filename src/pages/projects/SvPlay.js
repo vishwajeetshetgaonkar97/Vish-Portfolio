@@ -57,7 +57,7 @@ const SvPlay = (props) => {
               layout="responsive"
               width={1920}
               height={1080}
-              src="/work/svplay/svplayHero.png"
+              src="/work/svplay/svPlayHero.png"
               alt="svplay"
             />
           )}
