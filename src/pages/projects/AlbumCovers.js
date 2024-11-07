@@ -44,7 +44,7 @@ const AlbumCovers = (props) => {
               layout="responsive"
               width={1920}
               height={1080}
-              src="/work/AlbumCovers/mMockup.png"
+              src="/work/albumCovers/mMockup.png"
               alt="AlbumCovers series"
             />
           ) : (
@@ -53,7 +53,7 @@ const AlbumCovers = (props) => {
               layout="responsive"
               width={1920}
               height={1080}
-              src="/work/AlbumCovers/mockup.png"
+              src="/work/albumCovers/mockup.png"
               alt="AlbumCovers series"
             />
           )}
@@ -145,7 +145,7 @@ const AlbumCovers = (props) => {
                 layout="responsive"
                 width={1920}
                 height={1080}
-                src="/work/AlbumCovers/pm1.png"
+                src="/work/albumCovers/pm1.png"
                 alt="AlbumCovers series"
               />
             ) : (
@@ -154,7 +154,7 @@ const AlbumCovers = (props) => {
                 layout="responsive"
                 width={1920}
                 height={1080}
-                src="/work/AlbumCovers/p1.png"
+                src="/work/albumCovers/p1.png"
                 alt="AlbumCovers series"
               />
             )}
@@ -175,7 +175,7 @@ const AlbumCovers = (props) => {
                 layout="responsive"
                 width={1920}
                 height={1080}
-                src="/work/AlbumCovers/pm2.png"
+                src="/work/albumCovers/pm2.png"
                 alt="AlbumCovers series"
               />
             ) : (
@@ -184,7 +184,7 @@ const AlbumCovers = (props) => {
                 layout="responsive"
                 width={1920}
                 height={1080}
-                src="/work/AlbumCovers/p2.png"
+                src="/work/albumCovers/p2.png"
                 alt="AlbumCovers series"
               />
             )}

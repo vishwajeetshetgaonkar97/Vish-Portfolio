@@ -46,6 +46,15 @@
 //     ];
 const projectsList = [
   {
+    "id": 10,
+    "name": "SportVot: Design System (v1)",
+    "description": "Led the creation of a comprehensive design system for SportVot to unify the UI/UX across web, mobile, and OTT platforms. The system addressed design inconsistencies, improved user experience, and enhanced brand identity.",
+    "image": "/work/svDesignSystem/p1.png",
+    "link": "/projects/SvDesignSystem",
+    "category": "D",
+    "tags": "UI, UX, Product Design, Design System"
+  },
+  {
     id: 1,
     name: "Elevating SportVot's Live Production & Streaming Experience",
     description:
