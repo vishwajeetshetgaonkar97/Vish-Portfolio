@@ -91,7 +91,9 @@ const SplineBg = (props) => {
             <Spline
               className={styles.splineBg}
               scene={
-                "https://prod.spline.design/dnQzzwqu2r542cRY/scene.splinecode"
+                isMobile
+                  ? "https://prod.spline.design/nhViJ0PYOK0pJXmR/scene.splinecode"
+                  : "https://prod.spline.design/dnQzzwqu2r542cRY/scene.splinecode"
               }
               onError={handleSplineError}
               onLoad={onLoad}
