@@ -1,18 +1,20 @@
 .heading {
   color: rgb(255, 255, 255);
   text-shadow: rgba(255, 255, 255, 0.651) 0px 0px 7px;
-  font-size: 3.2rem;
+  font-size: 2.8rem;
+  font-weight: 500;
 }
 
 .subheading {
-  font-weight: 700;
+  /* font-weight: 700; */
   font-size: 1.5rem;
   /* text-shadow: rgba(255, 255, 255, 0.7) 0px 0px 2px; */
   opacity: 1;
-  background: -webkit-linear-gradient(45deg, #ffffff, #dfdfdfc3);
+  background: -webkit-linear-gradient(-45deg, #ffffff, #dfdfdfc3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding-bottom: 0vh;
+  margin-top: -0.4rem;
+  padding-bottom: 1vh;
 }
 
 .container {
@@ -21,6 +23,7 @@
   width: 100%;
   justify-content: center;
   margin-top: -2.5vh;
+  gap: 1.2rem;
 }
 
 .buttonContainer {

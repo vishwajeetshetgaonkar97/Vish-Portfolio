@@ -2,20 +2,23 @@
 .cardWrapper {
   background: linear-gradient(#ffffff11, rgba(255, 255, 255, 0.03));
   backdrop-filter: blur(5px);
-  margin: 1.2vh;
+  /* margin: 1.2vh; */
   display: flex;
   flex-direction: row;
   width: fit-content;
   opacity:1;
   cursor: pointer;
-  transition: all 0.1s ease-in;
+  transition: all 0.2s ease-in;
   border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0);
+  overflow: hidden;
 }
 
 .cardWrapper:hover {
   scale: 1;
   backdrop-filter: blur(12px);
   background: radial-gradient(rgba(0, 166, 255, 0.888)rgba(255, 255, 255, 0.333));
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .cardWrapper img {
@@ -23,28 +26,27 @@
   width: calc(40vh * 16/9) !important;
   /* width: calc(27vh * (16 / 9)); */
   background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 0.5rem  0 0 0.5rem;
+  border-radius: 0.5rem  ;
+  transition: all ease-in-out 0.1s;
 }
-
+.cardWrapper:hover img {
+  transform: scale(1.01);
+}
 .cardContent{
-  width: 40vw;
+  width: calc(40vh * 16/9) !important;
   padding: 0.5vh 2vh;
 }
 
 .cardWrapperHeading {
-  font-size: 2rem;
-  font-weight: 800;
-  padding: 1.5vh 0 0.8vh 0;
+  font-size: 1.5rem;
   text-shadow: rgba(255, 255, 255, 0.651) 0px 0px 2px;
   text-transform: uppercase;
   color: rgb(255, 255, 255);
 }
 
 .cardWrapperDescription {
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 0 1vw 1vh 0;
-  line-height: 3.4vh;
-  font-weight: 500;
 }
 
 .tagsInfo{

@@ -87,16 +87,17 @@ const SplineBg = (props) => {
 
       <Suspense fallback={<Loader />}>
         {!hasSplineError && (
-          <Spline
-            className={styles.splineBg}
-            scene={
-              isMobile
-                ? "https://prod.spline.design/nhViJ0PYOK0pJXmR/scene.splinecode"
-                : "https://prod.spline.design/dnQzzwqu2r542cRY/scene.splinecode"
-            }
-            onError={handleSplineError}
-            onLoad={onLoad}
-          />
+          <>
+            <Spline
+              className={styles.splineBg}
+              scene={
+                "https://prod.spline.design/dnQzzwqu2r542cRY/scene.splinecode"
+              }
+              onError={handleSplineError}
+              onLoad={onLoad}
+            />
+          
+          </>
         )}
 
         {hasSplineError && (
@@ -126,7 +127,7 @@ const SplineBg = (props) => {
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={styles.socialLink} 
+                className={styles.socialLink}
               >
                 <Image
                   className={styles.socialIcon}

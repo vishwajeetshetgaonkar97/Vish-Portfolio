@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Mohave:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Armata&family=Mohave:ital,wght@0,300..700;1,300..700&display=swap');
 
 /* width */
 ::-webkit-scrollbar {
@@ -41,6 +42,9 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: "Mohave", sans-serif;
+  font-family: "Armata", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 main{

@@ -74,7 +74,7 @@ const Work = (props) => {
     <div id="work" className={`flex flex-col w-full content-center items-center md:px-0 px-2 md:pb-6 pb-2`}>
       <h1
         ref={headingRef}
-        className={`${styles.heading} uppercase font-bold ${
+        className={`${styles.heading} uppercase  ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         } transition-all duration-700 ease-in-out`}
       >
