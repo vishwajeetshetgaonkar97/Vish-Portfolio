@@ -18,8 +18,6 @@ const About = (props) => {
     "/skills/9.jpg",
   ];
 
-
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -43,27 +41,21 @@ const About = (props) => {
   }, []);
 
   return (
-    <div
-    id="about"
-      className={`${styles.wrapContainer} `}
-    >
+    <div id="about" className={`${styles.wrapContainer} `}>
       <h1
         ref={headingRef}
         className={`${styles.heading}  ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         } transition-all duration-700 ease-in-out`}
       >
-        As a <span>UI/UX designer</span> with a keen understanding of
-        development, I specialize in creating seamless digital experiences that
-        prioritize both usability and aesthetics. With over <span>3 years</span>{" "}
-        of experience at SportVot and various freelance projects, I’ve led the
-        design of <span>user-centered platforms</span>—ranging from intuitive
-        mobile apps to complex dashboards—each tailored to enhance user
-        engagement and satisfaction. My design process is rooted in{" "}
-        <span>user research, prototyping, and iteration</span> to ensure every
-        solution is functional, visually appealing, and impactful. I create
-        designs that not only look great but are also technically sound and
-        scalable.
+        As a <span>Product Designer</span> and <span>UI/UX Developer</span>, I’ve been crafting <span>intuitive,
+        user-centered B2B</span> and <span>B2C</span> digital products for <span>startups</span> since 2020.
+        Through my experience at SportVot and in freelance roles, I blend design
+        and front-end development to create <span>scalable, high-performance
+        solutions</span>. Proficient in <span>React.js, Next.js,</span> and <span>Figma</span>, I’ve led <span>platform
+        redesigns</span> and launched <span>web apps</span> that <span>drive user engagement</span> and <span>business
+        growth</span>. My <span>data-driven, iterative</span> design process ensures every solution
+        is <span>visually compelling, functional, and aligned with business goals.</span>
       </h1>
       <div className={styles.skills}>
         {skillImages.map((image, index) => (
@@ -77,8 +69,6 @@ const About = (props) => {
           />
         ))}
       </div>
-
-    
     </div>
   );
 };

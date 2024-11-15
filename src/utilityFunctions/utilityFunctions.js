@@ -58,7 +58,7 @@ const projectsList = [
     id: 1,
     name: "Elevating SportVot's Live Production & Streaming Experience",
     description:
-      "I spearheaded the design efforts for SportVot, collaborating with cross-functional teams to create user-friendly interfaces across our website, OTT platform, mobile app, and cloud studio dashboard. This comprehensive approach included user research and usability testing to inform design decisions and ensure a seamless experience.",
+      "I led the design efforts at SportVot, collaborating with cross-functional teams to create user-friendly interfaces for the website, OTT platform, mobile app, and cloud studio. This included user research and testing to ensure a seamless experience.",
     image: "/work/sportvot/mockup.png",
     link: "/projects/SportvotProduct",
     category: "D",

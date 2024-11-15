@@ -17,25 +17,25 @@ const Navbar = ({ isProject = false }) => {
     }
   };
   const [isOpen, setIsOpen] = useState(false);
- // Function to close the menu
- const closeMenu = () => {
-  setIsOpen(false);
-};
+  // Function to close the menu
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
 
-const socialMediaLinks = [
-  {
-    platform: "linkedin",
-    url: "https://www.linkedin.com/in/vishwajeet-shetgaonkar",
-  },
-  { platform: "twitter", url: "https://twitter.com/vshetgaonkar97" },
-  { platform: "dribbble", url: "https://dribbble.com/Shetgaonkar" },
-  { platform: "github", url: "https://github.com/vishwajeetshetgaonkar97" },
-];
+  const socialMediaLinks = [
+    {
+      platform: "linkedin",
+      url: "https://www.linkedin.com/in/vishwajeet-shetgaonkar",
+    },
+    { platform: "twitter", url: "https://twitter.com/vshetgaonkar97" },
+    { platform: "dribbble", url: "https://dribbble.com/Shetgaonkar" },
+    { platform: "github", url: "https://github.com/vishwajeetshetgaonkar97" },
+  ];
 
   return (
     <>
       <nav
-        className={`${styles.navbar} flex items-center content-center  w-full md:px-6 px-2 py-4 `}
+        className={`${styles.navbar} flex items-center content-center  w-full md:px-3 px-2 py-3 `}
       >
         <Image
           src={isProject ? "/back.png" : "/logo.png"}
@@ -57,31 +57,59 @@ const socialMediaLinks = [
             alt="logo image"
           />
         </div>
-
         <div
           className={`${styles.navList} ${
             isOpen ? styles.linksContainerActive : ""
           }`}
         >
-          <Link href="/#work"  onClick={closeMenu} scroll={false} className={styles.topNavButton}>
+          <Link
+            href="/#work"
+            onClick={closeMenu}
+            scroll={false}
+            className={styles.topNavButton}
+          >
             Work
           </Link>
-          <Link href="/#about" onClick={closeMenu} className={styles.topNavButton}>
+          <Link
+            href="/#about"
+            onClick={closeMenu}
+            className={styles.topNavButton}
+          >
             About
           </Link>
-          <Link href="#contact" onClick={closeMenu} scroll={false} className={styles.topNavButton}>
+          <Link
+            href="#contact"
+            onClick={closeMenu}
+            scroll={false}
+            className={styles.topNavButton}
+          >
             Contact
           </Link>
-<div className={styles.socialMedia} >
-
-
-          {socialMediaLinks.map(({ platform, url }) => (
+          <button
+            className={`${styles.button} `}
+            onClick={() => {
+              const pdfUrl = "/Vishwajeet-Shetgaonker-Resume.pdf";
+              window.open(pdfUrl, "_blank");
+            }}
+          >
+            Resume
+            <Image
+              className={`${styles.buttonIcon} `}
+              layout="responsive"
+              width={20}
+              height={20}
+              src="/down.png"
+              alt="link"
+            />
+          </button>{" "}
+          <div className={styles.socialMedia}>
+            {socialMediaLinks.map(({ platform, url }) => (
               <a
                 key={platform}
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={styles.socialLink} 
+                className={styles.socialLink}
               >
                 <Image
                   className={styles.socialIcon}
@@ -92,7 +120,7 @@ const socialMediaLinks = [
                 />
               </a>
             ))}
-</div>
+          </div>
         </div>
       </nav>
     </>
