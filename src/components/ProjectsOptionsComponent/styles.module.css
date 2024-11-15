@@ -42,13 +42,15 @@ gap: 0.8rem;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    width: 100vw;
     gap: 0.5rem;
     padding-top: 0vh;
-    padding: 0 0vw;
+    padding: 0 2vw;
     align-items: center;
   }
-
+.cardsContainer{
+  width: 100%;
+}
 
   
 }

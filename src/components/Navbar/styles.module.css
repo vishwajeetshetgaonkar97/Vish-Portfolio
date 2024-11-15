@@ -197,19 +197,20 @@
   }
 
   .socialIcon {
-    height: 4vh;
-    width: 4vh;
+    height: 5vh;
+    width: 5vh;
   }
 
   .button{
   
-    padding: 0.4rem 1.6rem;
+    padding: 0.4rem 1.4rem;
     border: 1.8px solid rgba(255, 255, 255, 0.4);
     border-radius: 6px;
     font-weight: 600;
     font-size: 1.5rem;
     gap: 1rem;
     margin-left: 0rem;
+    margin: 2vh 0 1vh 0;
   }
   .button:hover{
     background-color: rgba(255, 255, 255, 0.4);
