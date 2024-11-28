@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import Contact from "@/components/Contact/Contact";
 import ProductOptionsComponents from "../../components/ProjectsOptionsComponent/ProjectsOptionsComponent";
 
-const SvDesignSystem = (props) => {
+const SvStudioDashboard = (props) => {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     const handleResize = () => {
@@ -35,10 +35,11 @@ const SvDesignSystem = (props) => {
 
         <div className={styles.main_container}>
           <div className={styles.headingContainer}>
-            <div className={styles.heading}>Sportvot: Design System (v1)</div>
+            <div className={styles.heading}>SportVot: Studio Dashboard</div>
             <div className={styles.subHeading}>
-              creating a full on design system from scratch which will be used
-              all across platform app, web, mob, dashboard
+              Creating a cloud-based studio dashboard to empower sports
+              production with seamless streaming, overlays, and scoring features
+              across multiple sports.
             </div>
           </div>
 
@@ -80,8 +81,8 @@ const SvDesignSystem = (props) => {
                 <ul>User Research</ul>
                 <ul>Usability Testing</ul>
                 <ul>High Fidelity Design</ul>
-                <ul>Component Libraries</ul>
-                <ul>Product Design Libraries</ul>
+                <ul>Scalable Component Libraries</ul>
+                <ul>Usability Testing</ul>
               </div>
             </div>
 
@@ -90,17 +91,16 @@ const SvDesignSystem = (props) => {
               <div className={styles.role_description_containers}>
                 <ul>Founders</ul>
                 <ul>Product Managers</ul>
-                <ul>Marketing Team</ul>
-                <ul>Illustrators</ul>
                 <ul>Developers</ul>
                 <ul>Operational Team</ul>
+                <ul>Broadcasters</ul>
               </div>
             </div>
 
             <div className={styles.sub_role_container}>
               <div className={styles.role}>Year</div>
               <div className={styles.role_description_containers}>
-                <ul>2024</ul>
+                <ul>2020 - Present</ul>
               </div>
             </div>
           </div>
@@ -108,42 +108,60 @@ const SvDesignSystem = (props) => {
           <div className={styles.content_container}>
             <div className={styles.content_header}>Project Summary</div>
             <div className={styles.content}>
-              At SportVot, there were significant design inconsistencies across
-              platforms that resulted in brand identity confusion and hindered
-              development efficiency. With no established design system, the
-              platform was experiencing challenges in maintaining consistent UI
-              elements, behaviors, and interactions. As a result, it became
-              clear that developing a unified design system was essential for
-              improving both the user experience (UX) and the development
-              workflow. This would also support future scalability, especially
-              as the product expanded to new markets.
+              The Studio Dashboard served as the backbone of SportVot's sports
+              streaming ecosystem, empowering broadcasters to effortlessly
+              produce and manage live events for over 10 sports. The lack of a
+              unified, intuitive interface and streamlined workflows in the
+              market created significant challenges for users, making it
+              difficult to handle overlays, scoring, analytics, and streaming
+              efficiently. The objective was to craft a comprehensive,
+              user-friendly dashboard that addressed these gaps, reducing
+              operational inefficiencies while meeting the varied needs of
+              broadcasters, production teams, and clients.
             </div>
           </div>
 
           <div className={styles.content_container}>
             <div className={styles.content_header}>Problem</div>
-            <ul className={`${styles.points} py-1`}>
+            <div className={styles.content}>
+              The lack of a unified workflow for sports production and streaming
+              created fragmented experiences and inefficiencies. Broadcasters
+              struggled with managing player data, implementing accurate scoring
+              mechanisms, customizing overlay controls, and accessing live
+              streaming analytics. Additionally, the absence of robust ad
+              management tools led to missed monetization opportunities.
+            </div>
+            <ul className={`${styles.points} py-2`}>
               <li className={styles.content}>
-                <b>Inconsistent Design Across Platforms:</b> There was no
-                unified design language, leading to issues like broken UI
-                components, inconsistent behaviors (e.g., hover states), and
-                mismatched colors.
+                <b>Player Data Management:</b> Broadcasters faced challenges in
+                accessing, updating, and organizing athlete profiles during live
+                events, leading to delays and inaccuracies.
               </li>
               <li className={styles.content}>
-                <b>Brand Identity Crisis:</b> The absence of brand guidelines
-                created confusion, both internally and externally, impacting
-                marketing and fundraising efforts.
+                <b>Scoring Mechanisms:</b> Inconsistent implementation of
+                sport-specific rules caused errors, undermining trust in the
+                platform’s scoring accuracy.
               </li>
               <li className={styles.content}>
-                <b>Inefficiency in Development:</b> Without standardized
-                components, development was slower, with many design updates
-                requiring manual intervention.
+                <b>Overlay Controls:</b> Fragmented tools limited customization
+                and created bottlenecks in managing live graphics and overlays.
+              </li>
+              <li className={styles.content}>
+                <b>Live Streaming Analytics:</b> Insufficient insights into
+                viewer engagement and stream performance hindered real-time
+                decision-making and optimization.
+              </li>
+              <li className={styles.content}>
+                <b>Ad Management and Revenue:</b> The absence of robust tools
+                for ad integration and revenue tracking resulted in
+                underutilized monetization opportunities.
               </li>
             </ul>
             <div className={`${styles.content} mt-1 `}>
-              <b>Impact:</b> These issues were not only frustrating for users,
-              but also impacted the company’s credibility, fundraising rounds,
-              and internal workflow.
+              <b>Impact:</b> These challenges frustrated end-users, hindered
+              operational efficiency, degraded the quality of live sports
+              productions, and ultimately limited user satisfaction and revenue
+              growth.
             </div>
             {isMobile ? (
               <Image
@@ -170,19 +188,34 @@ const SvDesignSystem = (props) => {
             <div className={styles.content_header}>Stakeholder Impact</div>
             <ul className={styles.points}>
               <li className={styles.content}>
-                <b>Founders: </b> The lack of consistency was undermining the
-                brand’s identity, hindering investor confidence, and making it
-                harder to fundraise effectively.
+                <b>Founders: </b> Operational inefficiencies and inconsistencies
+                undermined scalability, affecting investor confidence and
+                hindering fundraising efforts.
               </li>
               <li className={styles.content}>
-                <b>Product Managers: </b> Without a proper design system, they
-                struggled to ensure alignment between design and development
-                teams, leading to inefficiencies and confusion.
+                <b>Clients: </b> Frustration from inaccurate scores, poor
+                overlay management, and lack of live analytics, reducing trust,
+                engagement, and retention.
               </li>
               <li className={styles.content}>
-                <b>Clients: </b> Clients faced a frustrating user experience due
-                to the inconsistent UI and behavior of the product, which led to
-                reduced engagement and trust.
+                <b>Broadcasting Teams: </b> Fragmented workflows led to delays,
+                errors, and decreased productivity during live events, impacting
+                broadcast quality.
+              </li>
+              <li className={styles.content}>
+                <b>Production Teams:</b> Difficulty in managing and customizing
+                overlays and data, leading to increased operational bottlenecks
+                and a lack of streamlined processes.
+              </li>
+              <li className={styles.content}>
+                <b>Ad Sales Teams:</b>Inability to manage and optimize ad
+                placements and revenue streams, leading to missed opportunities
+                and reduced monetization.
+              </li>
+              <li className={styles.content}>
+                <b>End Viewers: </b>Disconnected user experience due to
+                inconsistent data, performance issues, and poor visual
+                representation, impacting overall satisfaction and engagement.
               </li>
             </ul>
           </div>
@@ -191,18 +224,37 @@ const SvDesignSystem = (props) => {
             <div className={styles.content_header}>Goals</div>
             <ul className={styles.points}>
               <li className={styles.content}>
-                <b>Consistency: </b> Establish a unified design system for
-                buttons, components, typography, input fields, shadows, and
-                other UI elements to be used across all platforms.
+                <b>Streamlined Workflows: </b> Create a unified, intuitive
+                interface to manage player data, scoring, overlays, analytics,
+                and ads efficiently across all sports and streaming types.
               </li>
               <li className={styles.content}>
-                <b>Efficiency: </b> Improve development time by streamlining
-                communication between design and development teams, utilizing
-                reusable components.
+                <b>Accuracy & Consistency: </b> Ensure real-time data accuracy
+                for player profiles and scoring, with consistent application of
+                sport-specific rules and features.
               </li>
               <li className={styles.content}>
-                <b>Scalability: </b> Ensure the design system could scale with
-                future product expansions and feature additions.
+                <b>Enhanced Analytics: </b>Provide in-depth live streaming
+                analytics, offering insights into viewer engagement, performance
+                metrics, and real-time feedback to improve broadcast decisions.
+              </li>
+              <li className={styles.content}>
+                <b>Optimized Monetization: </b>Implement robust ad management
+                tools to enhance revenue generation by offering better control
+                and optimization of advertisements during live streams.
+              </li>
+
+              <li className={styles.content}>
+                <b>Scalability & Flexibility: </b>Build a scalable solution that
+                adapts to the needs of broadcasters, production teams, and
+                clients as the platform grows and diversifies into new sports or
+                features.
+              </li>
+              <li className={styles.content}>
+                <b>Improved User Experience: </b>Provide a seamless,
+                frustration-free experience for all users (broadcasters,
+                clients, and viewers) through intuitive design, consistency, and
+                efficient features.
               </li>
             </ul>
           </div>
@@ -213,25 +265,38 @@ const SvDesignSystem = (props) => {
               {" "}
               User Research
             </div>
-            <div className={styles.content}>
-              To identify the main pain points, I began by gathering feedback
-              from internal teams, including founders, product managers,
-              marketing, content, and tech teams. Key insights included:
-            </div>
+
             <ul className={styles.points}>
               <li className={styles.content}>
-                Lack of brand guidelines and documentation led to inconsistent
-                design practices.
+                Conducted interviews with broadcasters, production teams, and
+                clients to identify pain points.
               </li>
               <li className={styles.content}>
-                Unrealistic client demands created confusion and
-                miscommunication between the product and design teams.
+                Observed live event production to understand real-world
+                challenges in overlay management, scoring accuracy, and live
+                streaming analytics.
+              </li>
+            </ul>
+
+            <div className={`${styles.content_sub_header} mt-4`}>
+              {" "}
+              Key Insights
+            </div>
+
+            <ul className={styles.points}>
+              <li className={styles.content}>
+              Users struggled with fragmented workflows, leading to operational inefficiencies and errors during live events.
               </li>
               <li className={styles.content}>
-                Some users expressed a sense of inconsistency but couldn’t
-                pinpoint exact issues. However, feedback from clients and larger
-                organizations highlighted several design flaws, including UI
-                breakages, pop-up behavior, hover states, and visual cues.
+              Overlays were often misaligned due to the absence of a real-time preview system.
+              </li>
+
+              <li className={styles.content}>
+              Scoring panels lacked sport-specific adaptations, leading to inaccuracies in game data.
+              </li>
+
+              <li className={styles.content}>
+              There was insufficient access to real-time analytics, affecting performance optimization during streams.
               </li>
             </ul>
 
@@ -240,16 +305,14 @@ const SvDesignSystem = (props) => {
               Competitive Analysis:
             </div>
             <div className={styles.content}>
-              Although there weren’t direct competitors in the same space, I
-              looked at a variety of SaaS products and sports platforms to
-              understand how they maintained consistency. Key sources of
-              inspiration included:
+            Although there were no direct competitors in the same space, I explored various live production platforms and SaaS products to understand how they handled workflows, overlays, and scoring management. Key sources of inspiration included:
             </div>
             <ul className={styles.points}>
-              <li className={`${styles.content} font-bold `}>CRED</li>
-              <li className={`${styles.content} font-bold `}>CricBuzz</li>
-              <li className={`${styles.content} font-bold `}>La Liga</li>
-              <li className={`${styles.content} font-bold `}>FIFA</li>
+              <li className={`${styles.content}  `}>   <b>OBS:</b>For customizable overlays and real-time streaming management.</li>
+              <li className={`${styles.content}  `}><b>vMix:</b> For live event production and efficient integration of multiple media sources.  </li>
+              <li className={`${styles.content} `}><b>StreamYard:</b> For its intuitive UI and simplified live streaming controls</li>
+              <li className={`${styles.content}  `}><b>CricBuzz:</b> For handling real-time scoring and match data visualization.</li>
+              <li className={`${styles.content}  `}><b>Ligr:</b> For its innovative ad management system and revenue optimization tools.</li>
             </ul>
             <div className={`${styles.content} mt-1`}>
               These platforms provided insights into consistent UI behaviors,
@@ -259,7 +322,7 @@ const SvDesignSystem = (props) => {
 
           <div className={styles.content_container}>
             <div className={styles.content_header}> Design Process</div>
-      
+
             {isMobile ? (
               <Image
                 className={`${styles.mockupImage} w-full h-auto mt-6`}
@@ -269,15 +332,17 @@ const SvDesignSystem = (props) => {
                 src="/work/svDesignSystem/m3.png"
                 alt="svplay"
               />
-            ) : ( <Image
+            ) : (
+              <Image
                 className={`${styles.mockupImage} w-full h-auto mt-6 `}
                 layout="responsive"
                 width={1920}
                 height={1080}
                 src="/work/svDesignSystem/p3.png"
                 alt="svplay"
-              />)}
-         
+              />
+            )}
+
             <div className={`${styles.content_sub_header} mt-6`}>
               Initial Steps
             </div>
@@ -474,4 +539,4 @@ const SvDesignSystem = (props) => {
   );
 };
 
-export default SvDesignSystem;
+export default SvStudioDashboard;

@@ -66,6 +66,7 @@ padding: 1vh 0;
 
 .content_container{
 flex-direction: column;
+padding: 1.5rem 2rem 0.5rem 2rem;
 }
 
 .sub_role_container{
@@ -106,7 +107,11 @@ ul.points{
 }
 
 .points li{
-  padding: 0.5rem 0;
+  padding: 0rem 0 0.9rem 0;
+}
+
+.contentAchievement{
+  padding: 0 !important;
 }
 
 .achievements{
@@ -114,6 +119,8 @@ ul.points{
   display: flex;
   justify-content: flex-start;
   gap: 0.7rem;
+  margin-top: 0.5rem;
+  
 }
 
 ul.achievements{
@@ -124,11 +131,12 @@ ul.achievements{
 }
 
 .achievements li{
-  padding: 2rem 1.5rem;
+  padding: 2.8rem 1.5rem;
   background-color: rgb(255, 255, 255,0.1);
   border-radius: 0.4rem;
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
 }
 .achievements li b{
   font-weight: 700;
