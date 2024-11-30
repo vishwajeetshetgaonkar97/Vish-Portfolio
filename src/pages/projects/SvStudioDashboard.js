@@ -58,7 +58,7 @@ const SvStudioDashboard = (props) => {
               layout="responsive"
               width={1920}
               height={1080}
-              src="/work/svDesignSystem/p1.png"
+              src="/work/svStudio/mockup.png"
               alt="svplay"
             />
           )}
@@ -285,18 +285,22 @@ const SvStudioDashboard = (props) => {
 
             <ul className={styles.points}>
               <li className={styles.content}>
-              Users struggled with fragmented workflows, leading to operational inefficiencies and errors during live events.
+                Users struggled with fragmented workflows, leading to
+                operational inefficiencies and errors during live events.
               </li>
               <li className={styles.content}>
-              Overlays were often misaligned due to the absence of a real-time preview system.
-              </li>
-
-              <li className={styles.content}>
-              Scoring panels lacked sport-specific adaptations, leading to inaccuracies in game data.
+                Overlays were often misaligned due to the absence of a real-time
+                preview system.
               </li>
 
               <li className={styles.content}>
-              There was insufficient access to real-time analytics, affecting performance optimization during streams.
+                Scoring panels lacked sport-specific adaptations, leading to
+                inaccuracies in game data.
+              </li>
+
+              <li className={styles.content}>
+                There was insufficient access to real-time analytics, affecting
+                performance optimization during streams.
               </li>
             </ul>
 
@@ -305,14 +309,33 @@ const SvStudioDashboard = (props) => {
               Competitive Analysis:
             </div>
             <div className={styles.content}>
-            Although there were no direct competitors in the same space, I explored various live production platforms and SaaS products to understand how they handled workflows, overlays, and scoring management. Key sources of inspiration included:
+              Although there were no direct competitors in the same space, I
+              explored various live production platforms and SaaS products to
+              understand how they handled workflows, overlays, and scoring
+              management. Key sources of inspiration included:
             </div>
             <ul className={styles.points}>
-              <li className={`${styles.content}  `}>   <b>OBS:</b>For customizable overlays and real-time streaming management.</li>
-              <li className={`${styles.content}  `}><b>vMix:</b> For live event production and efficient integration of multiple media sources.  </li>
-              <li className={`${styles.content} `}><b>StreamYard:</b> For its intuitive UI and simplified live streaming controls</li>
-              <li className={`${styles.content}  `}><b>CricBuzz:</b> For handling real-time scoring and match data visualization.</li>
-              <li className={`${styles.content}  `}><b>Ligr:</b> For its innovative ad management system and revenue optimization tools.</li>
+              <li className={`${styles.content}  `}>
+                {" "}
+                <b>OBS:</b>For customizable overlays and real-time streaming
+                management.
+              </li>
+              <li className={`${styles.content}  `}>
+                <b>vMix:</b> For live event production and efficient integration
+                of multiple media sources.{" "}
+              </li>
+              <li className={`${styles.content} `}>
+                <b>StreamYard:</b> For its intuitive UI and simplified live
+                streaming controls
+              </li>
+              <li className={`${styles.content}  `}>
+                <b>CricBuzz:</b> For handling real-time scoring and match data
+                visualization.
+              </li>
+              <li className={`${styles.content}  `}>
+                <b>Ligr:</b> For its innovative ad management system and revenue
+                optimization tools.
+              </li>
             </ul>
             <div className={`${styles.content} mt-1`}>
               These platforms provided insights into consistent UI behaviors,
@@ -321,124 +344,121 @@ const SvStudioDashboard = (props) => {
           </div>
 
           <div className={styles.content_container}>
-            <div className={styles.content_header}> Design Process</div>
+            <div className={styles.content_header}> Design Process & Testing</div>
 
-            {isMobile ? (
-              <Image
-                className={`${styles.mockupImage} w-full h-auto mt-6`}
-                layout="responsive"
-                width={1920}
-                height={1080}
-                src="/work/svDesignSystem/m3.png"
-                alt="svplay"
-              />
-            ) : (
-              <Image
-                className={`${styles.mockupImage} w-full h-auto mt-6 `}
-                layout="responsive"
-                width={1920}
-                height={1080}
-                src="/work/svDesignSystem/p3.png"
-                alt="svplay"
-              />
-            )}
-
-            <div className={`${styles.content_sub_header} mt-6`}>
-              Initial Steps
+            <div className={`${styles.content_sub_header} mt-2`}>
+              design-dev-iterate approach
             </div>
             <div className={styles.content}>
-              I began by reviewing existing designs and wireframes. With the
-              previous iterations as the foundation, I developed multiple
-              prototypes and began iterating on key components. I adopted a
-              design-dev-iterate approach, where modules were designed,
-              developed, and tested across desktop, tablet, and mobile to ensure
-              consistency and functionality.
+              I started wireframes, using research as the foundation. From
+              there, I developed multiple prototypes and began iterating of
+              versions. A design-dev-iterate approach was employed, where
+              modules were designed, developed, and tested across desktop,
+              tablet, and mobile devices to ensure usage and ux gaps were
+              iteratively changed.
             </div>
 
-            <div className={`${styles.content_sub_header} mt-6`}>
-              Key Decisions
-            </div>
-            <ul className={styles.points}>
-              <li className={`${styles.content}`}>
-                <b>Design Tokens & Variables:</b> I standardized color
-                variables, typography, and UI elements to create a cohesive
-                design system across all platforms.
-              </li>
-              <li className={`${styles.content}`}>
-                <b>Usability Testing:</b> We conducted usability tests using
-                Figma prototypes to gather feedback on different screen sizes
-                and devices. This allowed us to address potential gaps in the
-                system early.
-              </li>
-            </ul>
-
-            <div className={`${styles.content_sub_header} mt-6`}>
-              Components:
-            </div>
-            <ul className={styles.points}>
-              <li className={`${styles.content}`}>
-                Buttons (Primary, Secondary, Outlined, Gradient)
-              </li>
-              <li className={`${styles.content}`}>
-                Typography (Headings, Paragraphs, Custom Fonts)
-              </li>
-              <li className={`${styles.content}`}>Forms & Input Fields</li>
-              <li className={`${styles.content}`}>
-                Cards & UI Elements (Shadows, Borders)
-              </li>
-              <li className={`${styles.content}`}>Icons & Visual Cues</li>
-            </ul>
-            <div className={`${styles.content_sub_header} mt-6`}>
-              Design Rationale
-            </div>
-            <div className={`${styles.content}`}>
-              The components were selected based on the brand’s guidelines, as
-              well as industry standards for accessibility and usability. I
-              created variants for different states (e.g., hover, focus,
-              disabled) and ensured the system could scale across various
-              platforms and devices.
-            </div>
             {isMobile ? (
               <Image
                 className={`${styles.mockupImage} w-full h-auto`}
                 layout="responsive"
                 width={1920}
                 height={1080}
-                src="/work/svDesignSystem/m4.png"
+                src="/work/svDesignSystem/m1.png"
                 alt="svplay"
               />
             ) : (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto mt-4`}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/svStudio/m1.png"
+                alt="svplay"
+              />
+            )}
+
+            <div className={`${styles.content_sub_header} mt-6`}>
+              version variation ( a/b testing)
+            </div>
+            <div className={styles.content}>
+              a further color, modes variations were done on each level to get
+              more insights and how ux is getting hampered in field
+            </div>
+
+            {isMobile ? (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto`}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/svDesignSystem/m1.png"
+                alt="svplay"
+              />
+            ) : (
+              <Image
+                className={`${styles.mockupImage} w-full h-auto mt-4`}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/svStudio/m2.png"
+                alt="svplay"
+              />
+            )}
+
+            <div className={`${styles.content_sub_header} mt-6`}>
+              Design Rationale
+            </div>
+            <div className={`${styles.content}`}>
+              one might wonder why so many versions ans so many changes its
+              because mostly becasuse of how a startup eveolves and needs to
+              keep on doing changes based on user feedback, company tragectory ,
+              investors, and other factors like user base targetting, type of
+              users and much more.
+            </div>
+            {!isMobile && (
+              <div className={`${styles.marqueContainer}`}>
+              <div className={` shadow-sm p-2`} >
+             <div    className={`flex gap-2 items-center animate-marquee`}>
+             
               <Image
                 className={`${styles.mockupImage1} w-full h-auto `}
                 layout="responsive"
                 width={1920}
                 height={1080}
-                src="/work/svDesignSystem/p4.png"
+                src="/work/svStudio/m3.png"
                 alt="svplay"
               />
+              <Image
+                className={`${styles.mockupImage1} w-full h-auto `}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/svStudio/m4.png"
+                alt="svplay"
+              />
+              <Image
+                className={`${styles.mockupImage1} w-full h-auto `}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/svStudio/m5.png"
+                alt="svplay"
+              />
+              <Image
+                className={`${styles.mockupImage1} w-full h-auto `}
+                layout="responsive"
+                width={1920}
+                height={1080}
+                src="/work/svStudio/m6.png"
+                alt="svplay"
+              />
+              </div>
+              </div>
+              </div>
             )}
           </div>
 
-          <div className={styles.content_container}>
-            <div className={styles.content_header}> Testing & Validation</div>
-            <div className={`${styles.content_sub_header} mt-2`}>
-              Usability Testing
-            </div>
-            <div className={styles.content}>
-              We utilized Figma prototypes to test the design system across
-              desktop, tablet, and mobile platforms. Feedback was gathered from
-              both internal teams and external users to identify pain points and
-              gaps.
-            </div>
-            <div className={`${styles.content_sub_header} mt-4`}>
-              A/B Testing
-            </div>
-            <div className={styles.content}>
-              Different versions of key components (e.g., buttons, navigation
-              bars) were tested to determine which design most effectively met
-              user needs and aligned with the product’s goals.
-            </div>
-          </div>
 
           <div className={styles.content_container}>
             <div className={styles.content_header}>Impact & Results</div>

@@ -45,6 +45,7 @@ body {
   font-family: "Armata", sans-serif;
   font-weight: 400;
   font-style: normal;
+  overflow-x: hidden;
 }
 
 main{
@@ -70,4 +71,10 @@ main{
 .button:hover {
   border-color: #666666;
   background: #292929;
+}
+
+.animate-marquee {
+  display: flex;
+  width: calc(100% * 4); 
+  animation: marquee 35s linear infinite;
 }
