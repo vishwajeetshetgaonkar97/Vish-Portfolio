@@ -49,7 +49,7 @@ const SvStudioDashboard = (props) => {
               layout="responsive"
               width={1920}
               height={1080}
-              src="/work/svDesignSystem/mock1.png"
+              src="/work/svStudio/mock1.png"
               alt="svplay"
             />
           ) : (
@@ -280,7 +280,7 @@ const SvStudioDashboard = (props) => {
               layout="responsive"
               width={1920}
               height={1080}
-              src="/work/svDesignSystem/d1.png"
+              src="/work/svStudio/d1.png"
               alt="svplay"
             />
           ) : (
@@ -311,7 +311,7 @@ const SvStudioDashboard = (props) => {
                 layout="responsive"
                 width={1920}
                 height={1080}
-                src="/work/svDesignSystem/mm1.png"
+                src="/work/svStudio/mm1.png"
                 alt="svplay"
               />
             ) : (
@@ -339,7 +339,7 @@ const SvStudioDashboard = (props) => {
                 layout="responsive"
                 width={1920}
                 height={1080}
-                src="/work/svDesignSystem/mm2.png"
+                src="/work/svStudio/mm2.png"
                 alt="svplay"
               />
             ) : (
