@@ -147,6 +147,17 @@ const projectsList = [
     tags: "Dev, React.js, TypeScript, Tailwind,",
   },
   {
+    id: 12,
+    name: "Signage Content Management System",
+    description:
+      "A digital signage solution with a web dashboard for content creation and an Electron app for display. Supports real-time updates, offline playback, and seamless sync.",
+    image: "/work/signcastFullStack/mockup.png",
+    link: "/projects/SignCastCMS",
+    category: "Dev",
+   "tags": "Dev, React.js, TypeScript, Tailwind, Electron.js, WebSocket, Node.js, Offline-First"
+  },
+ 
+  {
     id: 9,
     name: "Everyday Poster Series",
     description:

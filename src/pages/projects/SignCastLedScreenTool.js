@@ -127,7 +127,7 @@ const SignCastLedScreenTool = (props) => {
                   <b>Equipment Selection: </b> Users select LED screen models, mount types, media players, and receptacle boxes from dropdowns populated by a CSV database linked to Google Sheets.
                 </li>
                 <li className={styles.content}>
-                  <b>Real-Time Diagram Updates:: </b> Dynamic drawing updates display measurements, dimensions, and power outlet locations based on user selections.
+                  <b>Real-Time Diagram Updates: </b> Dynamic drawing updates display measurements, dimensions, and power outlet locations based on user selections.
                 </li>
                 <li className={styles.content}>
                   <b>Configuration Options: </b> Toggle between horizontal/vertical orientations, choose “Niche” (recessed) or “Flat Wall” installations, and adjust floor-to-screen distance and niche depth.
