@@ -4,7 +4,7 @@ import ProjectListComponent from "../ProjectListComponent/ProjectListComponent";
 import projectsList from "@/utilityFunctions/utilityFunctions";
 
 const Work = (props) => {
-  const [tabSelected, setTabSelected] = useState("D");
+  const [tabSelected, setTabSelected] = useState("Dev");
   const [isVisible, setIsVisible] = useState(false);
   const headingRef = useRef(null);
   const subheadingRef = useRef(null);
@@ -86,7 +86,7 @@ const Work = (props) => {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         } transition-all duration-700 ease-in-out`}
       >
-        A Showcase of My Design, Development, and Various Creative Endeavors
+       Showcasing Design, Development, and Creative Innovation
       </h3>
       <div
         ref={buttonContainerRef}
@@ -94,17 +94,18 @@ const Work = (props) => {
           true ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         } transition-all duration-700 ease-in-out`}
       >
-        <button
-          className={`${styles.button} ${tabSelected === "D" && styles.buttonActive}`}
-          onClick={() => handleOnClick("D")}
-        >
-          Design
-        </button>
+      
         <button
           className={`${styles.button} ${tabSelected === "Dev" && styles.buttonActive}`}
           onClick={() => handleOnClick("Dev")}
         >
           Development
+        </button>
+        <button
+          className={`${styles.button} ${tabSelected === "D" && styles.buttonActive}`}
+          onClick={() => handleOnClick("D")}
+        >
+          Design
         </button>
         <button
           className={`${styles.button} ${tabSelected === "O" && styles.buttonActive}`}

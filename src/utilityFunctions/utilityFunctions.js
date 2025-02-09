@@ -105,6 +105,7 @@ const projectsList = [
     category: "Dev",
     tags: "Dev, Next.js, 3D, Spline",
   },
+
   {
     id: 6,
     name: "3D Portfolio Concept",
@@ -134,6 +135,16 @@ const projectsList = [
     link: "/projects/ActiveBuildingsDashboard",
     category: "Dev",
     tags: "Dev, React.js, Dashboard, CSS, OBS",
+  },
+  {
+    id: 11,
+    name: "LED Screen Install Tool",
+    description:
+      "A smart tool for creating and downloading PDF installation diagrams for LED screens. Dynamically updates drawings based on user inputs, making installations easier and faster.",
+    image: "/work/signcastScreen/mockup.png",
+    link: "/projects/SignCastLedScreenTool",
+    category: "Dev",
+    tags: "Dev, React.js, TypeScript, Tailwind,",
   },
   {
     id: 9,
