@@ -48,13 +48,13 @@ const About = (props) => {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         } transition-all duration-700 ease-in-out`}
       >
-        As a <span>Product Designer</span> and <span>UI/UX Developer</span>, I’ve been crafting <span>intuitive,
-        user-centered B2B</span> and <span>B2C</span> digital products for <span>startups</span> since 2020.
+        As a <span>Product Designer</span> and <span>Developer</span>, I’ve been crafting <span>intuitive,
+        user-centered B2B</span> and <span>D2C</span> digital products for <span>startups</span> since 2020.
         Through my experience at SportVot and in freelance roles, I blend design
-        and front-end development to create <span>scalable, high-performance
+        and development to create <span>scalable, high-performance
         solutions</span>. Proficient in <span>React.js, Next.js,</span> and <span>Figma</span>, I’ve led <span>platform
         redesigns</span> and launched <span>web apps</span> that <span>drive user engagement</span> and <span>business
-        growth</span>. My <span>data-driven, iterative</span> design process ensures every solution
+        growth</span>. My <span>data-driven, iterative</span> design-dev process ensures every solution
         is <span>visually compelling, functional, and aligned with business goals.</span>
       </h1>
       <div className={styles.skills}>
