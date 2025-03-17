@@ -96,6 +96,16 @@ const projectsList = [
     tags: "UI, UX, Mobile App",
   },
   {
+    id: 12,
+    name: "Knomicks - a e-commerece Sneaker Website",
+    description:
+      "A modern and engaging digital experience that leverages trending 3D immersive technologies.",
+    image: "/work/knomicks/mockup.png",
+    link: "/projects/Knomicks",
+    category: "Dev",
+    tags: "Dev, React.js, Redux, Framer Motion",
+  },
+  {
     id: 5,
     name: "3D Coca-Cola Website Concept",
     description:
