@@ -60,7 +60,7 @@ const About = (props) => {
         user-centered B2B</span> and <span>D2C</span> digital products for <span>startups</span> since 2020.
         Through my experience at SportVot and in freelance roles, I blend design
         and development to create <span>scalable, high-performance
-        solutions</span>. Proficient in <span>React.js, Next.js,</span> and <span>Figma</span>, I’ve led <span>platform
+        solutions</span>. Proficient in <span>React.js, Vue.js, Next.js,</span> and <span>Figma</span>, I’ve led <span>platform
         redesigns</span> and launched <span>web apps</span> that <span>drive user engagement</span> and <span>business
         growth</span>. My <span>data-driven, iterative</span> design-dev process ensures every solution
         is <span>visually compelling, functional, and aligned with business goals.</span>
