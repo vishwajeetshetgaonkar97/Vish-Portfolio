@@ -113,7 +113,7 @@ const projectsList = [
     image: "/work/sarvaDashboard/mockup.png",
     link: "/projects/SarvaDashboard",
     category: "Dev",
-    tags: "Dev, React.js, Dashboard, Chart.js, CSS",
+    tags: "Dev, Vue.js, Dashboard, Chart.js, CSS",
   },
   {
     id: 8,
@@ -123,7 +123,7 @@ const projectsList = [
     image: "/work/activeBuildingDashboard/mockup.png",
     link: "/projects/ActiveBuildingsDashboard",
     category: "Dev",
-    tags: "Dev, React.js, Dashboard, CSS, OBS",
+    tags: "Dev, Vue.js, Dashboard, CSS, OBS",
   },
 
   {

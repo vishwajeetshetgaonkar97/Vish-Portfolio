@@ -97,7 +97,7 @@ const SarvaDashboard = (props) => {
             <div className={styles.sub_role_container}>
               <div className={styles.role}>Technlogies</div>
               <div className={styles.role_description_containers}>
-                <ul>React.js</ul>
+                <ul>Vue.js</ul>
                 <ul>Chart.js</ul>
                 <ul>CSS</ul>
               </div>
@@ -228,7 +228,7 @@ const SarvaDashboard = (props) => {
               experience. The project emphasized agile development practices,
               effective teamwork, and thorough testing, resulting in a robust
               and visually appealing solution. This experience reinforced my
-              skills in React.js and data visualization and showcased my ability
+              skills in Vue.js and data visualization and showcased my ability
               to collaborate effectively with cross-functional teams to deliver
               impactful projects.
             </div>
