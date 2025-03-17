@@ -7,14 +7,22 @@ const About = (props) => {
   const headingRef = useRef(null);
 
   const skillImages = [
+       "/skills/3.png",
+    "/skills/10.svg",
+
     "/skills/1.png",
     "/skills/2.png",
-    "/skills/3.png",
+
+    "/skills/11.svg",
     "/skills/4.png",
+
     "/skills/5.png",
+    "/skills/12.svg",
+    "/skills/8.png",
+
     "/skills/6.png",
     "/skills/7.png",
-    "/skills/8.png",
+
     "/skills/9.jpg",
   ];
 
