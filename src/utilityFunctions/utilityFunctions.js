@@ -96,15 +96,36 @@ const projectsList = [
     tags: "UI, UX, Mobile App",
   },
   {
-    id: 12,
-    name: "Knomicks - a e-commerece Sneaker Website",
-    description:
-      "A modern and engaging digital experience that leverages trending 3D immersive technologies.",
-    image: "/work/knomicks/mockup.png",
-    link: "/projects/Knomicks",
-    category: "Dev",
-    tags: "Dev, React.js, Redux, Framer Motion",
+    "id": 13,
+    "name": "Knomicks - An E-commerce Sneaker Website",
+    "description": "A modern and engaging digital experience that leverages trending 3D immersive technologies.",
+    "image": "/work/knomicks/mockup.png",
+    "link": "/projects/Knomicks",
+    "category": "Dev",
+    "tags": "Dev, React.js, Redux, Framer Motion"
   },
+  
+  {
+    id: 7,
+    name: "Sarva Dashboard",
+    description:
+      "A dashboard for displaying air quality conditions for buildings and surrounding areas on a map, along with additional relevant information.",
+    image: "/work/sarvaDashboard/mockup.png",
+    link: "/projects/SarvaDashboard",
+    category: "Dev",
+    tags: "Dev, React.js, Dashboard, Chart.js, CSS",
+  },
+  {
+    id: 8,
+    name: "Active Building Dashboard",
+    description:
+      "An interactive dashboard displaying real-time air quality conditions across buildings and surrounding areas, with dynamic layouts and pixel-perfect design for large screen displays.",
+    image: "/work/activeBuildingDashboard/mockup.png",
+    link: "/projects/ActiveBuildingsDashboard",
+    category: "Dev",
+    tags: "Dev, React.js, Dashboard, CSS, OBS",
+  },
+
   {
     id: 5,
     name: "3D Coca-Cola Website Concept",
@@ -126,26 +147,7 @@ const projectsList = [
     category: "Dev",
     tags: "Dev, Next.js, Three.js, CSS",
   },
-  {
-    id: 7,
-    name: "Sarva Dashboard",
-    description:
-      "A dashboard for displaying air quality conditions for buildings and surrounding areas on a map, along with additional relevant information.",
-    image: "/work/sarvaDashboard/mockup.png",
-    link: "/projects/SarvaDashboard",
-    category: "Dev",
-    tags: "Dev, React.js, Dashboard, Chart.js, CSS",
-  },
-  {
-    id: 8,
-    name: "Active Building Dashboard",
-    description:
-      "An interactive dashboard displaying real-time air quality conditions across buildings and surrounding areas, with dynamic layouts and pixel-perfect design for large screen displays.",
-    image: "/work/activeBuildingDashboard/mockup.png",
-    link: "/projects/ActiveBuildingsDashboard",
-    category: "Dev",
-    tags: "Dev, React.js, Dashboard, CSS, OBS",
-  },
+
   {
     id: 11,
     name: "LED Screen Install Tool",
