@@ -80,7 +80,7 @@ const ActiveBuildingsDashboard = (props) => {
             layout="responsive"
             width={1920}
             height={1080}
-            src="/work/activeBuildingDashboard/mockup.png"
+            src="/work/activeBuildingDashboard/mockup1.png"
             alt="svplay"
           />}
 
@@ -94,7 +94,7 @@ const ActiveBuildingsDashboard = (props) => {
             <div className={styles.sub_role_container}>
               <div className={styles.role}>Technlogies</div>
               <div className={styles.role_description_containers}>
-                <ul>Vue.js</ul>
+                <ul>React.js</ul>
 
                 <ul>CSS</ul>
                 <ul>OBS</ul>
@@ -229,7 +229,7 @@ const ActiveBuildingsDashboard = (props) => {
               The ActiveBuildings Dashboard was successfully deployed and
               received positive feedback from clients for its accuracy,
               usability, and flexibility. The project strengthened my expertise
-              in Vue.js, real-time data integration, and ensuring
+              in React.js, real-time data integration, and ensuring
               pixel-perfect precision for large-scale displays.
             </div>
           </div>

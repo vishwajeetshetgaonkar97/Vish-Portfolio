@@ -110,20 +110,20 @@ const projectsList = [
     name: "Sarva Dashboard",
     description:
       "A dashboard for displaying air quality conditions for buildings and surrounding areas on a map, along with additional relevant information.",
-    image: "/work/sarvaDashboard/mockup.png",
+    image: "/work/sarvaDashboard/mockup1.png",
     link: "/projects/SarvaDashboard",
     category: "Dev",
-    tags: "Dev, Vue.js, Dashboard, Chart.js, CSS",
+    tags: "Dev, React.js, Dashboard, Chart.js, CSS",
   },
   {
     id: 8,
     name: "Active Building Dashboard",
     description:
       "An interactive dashboard displaying real-time air quality conditions across buildings and surrounding areas, with dynamic layouts and pixel-perfect design for large screen displays.",
-    image: "/work/activeBuildingDashboard/mockup.png",
+    image: "/work/activeBuildingDashboard/mockup1.png",
     link: "/projects/ActiveBuildingsDashboard",
     category: "Dev",
-    tags: "Dev, Vue.js, Dashboard, CSS, OBS",
+    tags: "Dev, React.js, Dashboard, CSS, OBS",
   },
 
   {
