@@ -39,8 +39,8 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: #ededed;
+  background: #000000;
   font-family: "Mohave", sans-serif;
   font-family: "Armata", sans-serif;
   font-weight: 400;
