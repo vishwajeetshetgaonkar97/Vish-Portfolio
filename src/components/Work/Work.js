@@ -15,6 +15,16 @@ const Work = (props) => {
     setTabSelected(click);
   };
 
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search);
+    if (searchParams.has('design')) {
+      setTabSelected("D");
+    } else if (searchParams.has('others')) {
+      setTabSelected("O");
+    }
+  }, []);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
